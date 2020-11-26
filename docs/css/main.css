@@ -8,6 +8,10 @@ Palette
   text shadow               : #106c81
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color :#1491ad;
   font-family: "Josefin Sans",sans-serif;
@@ -29,7 +33,7 @@ header::after {
 
 header h1 {
   float: left;
-  margin: 1em;
+  margin: 1em 1em 0;
   padding: 0;
   font-size: 2.5em;
 }
@@ -42,10 +46,18 @@ header h1 a {
   text-decoration: none;
 }
 
+header #menu_collapser {
+  display: none;
+}
+
 header nav {
   float: right;
-  margin: 1em;
+  margin: 2em;
   padding: 0;
+}
+
+header nav ul {
+  margin: 0;
 }
 header nav ul li {
   margin-right: 1em;
@@ -67,11 +79,38 @@ header nav ul li:hover a {
   color: #234cbc;
 }
 
+/* mobile view nav */
+@media only screen and (max-width: 770px) {
+  header #menu_collapser {
+    display: inline-block;
+    float: right;
+    margin: 1.8em 2em 1.8em 0;
+    padding: .2em;
+    background-color: #234cbc;
+    color: #1491ad;
+    border-radius: 1em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  header nav {
+    clear: both;
+    float: none;
+  }
+  header nav.collapsed {
+    display: none;
+  }
+  header nav ul li {
+    display: block;
+  }
+}
 
 /* Main styles */
 
 main {
-  width: 70%;
+  width: 60%;
   margin: 3em auto;
 }
 
@@ -83,9 +122,19 @@ main h1 {
   text-shadow: 4px 4px 4px #106c81;
   margin:.3em 0;
 }
+main h2 {
+  font-family: "Playfair Display",serif;
+  font-size: 1.7em;
+}
 
 main p {
   font-size: 1.5em
+}
+main a {
+  color: #EDED48;
+}
+main a:hover {
+  text-decoration: none;
 }
 
 main img {
