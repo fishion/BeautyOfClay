@@ -1,0 +1,89 @@
+/*
+Palette
+  background                : #1491ad
+  text                      : #EDED48
+  section border            : #1186a0
+  sitename & nav highlight  : #234cbc
+  nav & heading text        : #2C313F
+  text shadow               : #106c81
+*/
+
+body {
+  background-color :#1491ad;
+  font-family: "Josefin Sans",sans-serif;
+  color: #EDED48;
+}
+
+/* Header styles */
+
+header {
+  border-bottom: 1px solid #1186a0;
+  color : #2C313F;
+}
+header::before,
+header::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+header h1 {
+  float: left;
+  margin: 1em;
+  padding: 0;
+  font-size: 2.5em;
+}
+
+header h1 a {
+  font-family: "Playfair Display",serif;
+  color: #234cbc;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header nav {
+  float: right;
+  margin: 1em;
+  padding: 0;
+}
+header nav ul li {
+  margin-right: 1em;
+  display: inline-block;
+  border-bottom: 2.5px solid #1491ad;
+}
+header nav ul li.selected,
+header nav ul li:hover {
+  border-bottom: 2.5px solid #234cbc;
+}
+header nav ul li a {
+  font-size: 1.5em;
+  line-height: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2C313F;
+}
+header nav ul li:hover a {
+  color: #234cbc;
+}
+
+
+/* Main styles */
+
+main {
+  width: 70%;
+  margin: 3em auto;
+}
+
+main h1 {
+  font-family: 'Tangerine', serif;
+  color : #2C313F;
+  font-size: 7em;
+  font-weight: 100;
+  text-shadow: 4px 4px 4px #106c81;
+  margin:.3em 0;
+}
+
+main p {
+  font-size: 1.5em
+}
