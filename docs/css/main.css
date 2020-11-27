@@ -35,11 +35,11 @@ header h1 {
   float: left;
   margin: 1em 1em 0;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 501px) {
   header h1 {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
 }
 
@@ -52,69 +52,80 @@ header h1 a {
 }
 
 header #menu_collapser {
-  display: none;
+  display: block;
+  float: right;
+  margin: 1em;
+  padding: .2em;
+  font-size: 1.2em;
+  background-color: #234cbc;
+  color: #1491ad;
+  border-radius: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (min-width: 501px) {
   header #menu_collapser {
-    display: block;
-    float: right;
     margin: 1.8em 2em 1.8em 0;
-    padding: .2em;
-    background-color: #234cbc;
-    color: #1491ad;
-    border-radius: 1em;
     font-size: 1.5em;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-@media only screen and (max-width: 500px) {
-  header #menu_collapser {
-    margin:1em;
-    font-size: 1.2em;
+    display: none;
   }
 }
 
 header nav {
-  float: right;
-  margin: 2em;
-  padding: 0;
+  clear: both;
 }
-@media only screen and (max-width: 770px) {
+header nav.collapsed {
+  display: none;
+}
+@media only screen and (min-width: 501px) {
   header nav {
-    clear: both;
-    float: none;
-  }
-  header nav.collapsed {
-    display: none;
+    display: block !important; /* override collapsed rule */
+    clear: none;
+    float: right;
+    margin: 2em;
+    padding: 0;
   }
 }
 
 header nav ul {
   margin: 0;
+  padding: 0 0 0 2em;
 }
 header nav ul li {
   margin-right: 1em;
-  display: inline-block;
-  border-bottom: 2.5px solid #1491ad;
+  display: block;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (min-width: 501px) {
   header nav ul li {
-    display: block;
+    display: inline-block;
+    border-bottom: 2.5px solid #1491ad;
   }
 }
 header nav ul li.selected,
 header nav ul li:hover {
-  border-bottom: 2.5px solid #234cbc;
+  display: list-item;
+}
+@media only screen and (min-width: 501px) {
+  header nav ul li.selected,
+  header nav ul li:hover {
+    display: inline-block;
+    border-bottom: 2.5px solid #234cbc;
+  }
 }
 header nav ul li a {
-  font-size: 1.5em;
-  line-height: 2.5em;
+  font-size: 1em;
+  line-height: 2em;
   font-weight: bold;
   text-decoration: none;
   color: #2C313F;
+}
+@media only screen and (min-width: 771px) {
+  header nav ul li a {
+    font-size: 1.5em;
+    line-height: 2.5em;
+  }
 }
 header nav ul li:hover a {
   color: #234cbc;
@@ -123,25 +134,51 @@ header nav ul li:hover a {
 /* Main styles */
 
 main {
-  width: 60%;
-  margin: 3em auto;
+  width: 90%;
+  margin: 2em auto;
+}
+@media only screen and (min-width: 771px) {
+  main {
+    width: 60%;
+    margin: 3em auto;
+  }
 }
 
 main h1 {
   font-family: 'Tangerine', serif;
   color : #2C313F;
-  font-size: 7em;
+  font-size: 3em;
   font-weight: 100;
   text-shadow: 4px 4px 4px #106c81;
   margin:.3em 0;
 }
+@media only screen and (min-width: 501px) {
+  main h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (min-width: 771px) {
+  main h1 {
+    font-size: 7em;
+  }
+}
 main h2 {
   font-family: "Playfair Display",serif;
-  font-size: 1.7em;
+  font-size: 1.2em;
+}
+@media only screen and (min-width: 771px) {
+  main h2 {
+    font-size: 1.7em;
+  }
 }
 
 main p {
-  font-size: 1.5em
+  font-size: 1em
+}
+@media only screen and (min-width: 771px) {
+  main p {
+    font-size: 1.5em
+  }
 }
 main a {
   color: #EDED48;
