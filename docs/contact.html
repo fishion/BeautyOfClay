@@ -23,7 +23,8 @@
 
   <header>
     <h1><a href="/">Beauty of Clay</a></h1>
-    <nav>
+    <div id="menu_collapser">Menu</div>
+    <nav id="menu" class="collapsed">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="me.html">This is me...</a></li>
@@ -39,6 +40,13 @@
 
     <p>For any further information or enquires, please contact me at <a href="mailto:mahmoniramiri@gmail.com">mahmoniramiri@gmail.com</a>.</p>
   </main>
+
+  <script>
+    const menu = document.getElementById("menu")
+    document.getElementById("menu_collapser").addEventListener("click", function() {
+      menu.classList.toggle("collapsed");
+    });
+  </script>
 
 </body>
 

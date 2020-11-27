@@ -37,6 +37,11 @@ header h1 {
   padding: 0;
   font-size: 2.5em;
 }
+@media only screen and (max-width: 500px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+}
 
 header h1 a {
   font-family: "Playfair Display",serif;
@@ -49,11 +54,42 @@ header h1 a {
 header #menu_collapser {
   display: none;
 }
+@media only screen and (max-width: 770px) {
+  header #menu_collapser {
+    display: block;
+    float: right;
+    margin: 1.8em 2em 1.8em 0;
+    padding: .2em;
+    background-color: #234cbc;
+    color: #1491ad;
+    border-radius: 1em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header #menu_collapser {
+    margin:1em;
+    font-size: 1.2em;
+  }
+}
 
 header nav {
   float: right;
   margin: 2em;
   padding: 0;
+}
+@media only screen and (max-width: 770px) {
+  header nav {
+    clear: both;
+    float: none;
+  }
+  header nav.collapsed {
+    display: none;
+  }
 }
 
 header nav ul {
@@ -63,6 +99,11 @@ header nav ul li {
   margin-right: 1em;
   display: inline-block;
   border-bottom: 2.5px solid #1491ad;
+}
+@media only screen and (max-width: 770px) {
+  header nav ul li {
+    display: block;
+  }
 }
 header nav ul li.selected,
 header nav ul li:hover {
@@ -77,34 +118,6 @@ header nav ul li a {
 }
 header nav ul li:hover a {
   color: #234cbc;
-}
-
-/* mobile view nav */
-@media only screen and (max-width: 770px) {
-  header #menu_collapser {
-    display: inline-block;
-    float: right;
-    margin: 1.8em 2em 1.8em 0;
-    padding: .2em;
-    background-color: #234cbc;
-    color: #1491ad;
-    border-radius: 1em;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  header nav {
-    clear: both;
-    float: none;
-  }
-  header nav.collapsed {
-    display: none;
-  }
-  header nav ul li {
-    display: block;
-  }
 }
 
 /* Main styles */
