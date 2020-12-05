@@ -172,11 +172,20 @@ main h2 {
   }
 }
 
-main p {
+main ul {
+  list-style: square;
+  overflow: auto;
+  padding-left: 1.5em;
+}
+main ul li {
+  margin-bottom: .5em;
+}
+
+main p, main li {
   font-size: 1em
 }
 @media only screen and (min-width: 985px) {
-  main p {
+  main p, main li {
     font-size: 1.5em
   }
 }
