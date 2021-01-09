@@ -1,6 +1,6 @@
 /*
 Palette
-  background                : #1491ad
+  background                : #009CCF
   text                      : #EDED48
   section border            : #1186a0
   sitename & nav highlight  : #234cbc
@@ -13,7 +13,7 @@ Palette
 }
 
 body {
-  background-color :#1491ad;
+  background-color :#009CCF;
   font-family: "Josefin Sans",sans-serif;
   color: #EDED48;
 }
@@ -33,22 +33,24 @@ header::after {
 
 header h1 {
   float: left;
-  margin: 1em 1em 0;
+  margin: 15px 0 15px 1em;
   padding: 0;
-  font-size: 1.5em;
 }
-@media only screen and (min-width: 620px) {
-  header h1 {
-    font-size: 2.5em;
+header h1 img {
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  display:block;
+}
+@media only screen and (min-width: 670px) {
+  header h1 img {
+    height: 70px;
   }
 }
-
-header h1 a {
-  font-family: "Playfair Display",serif;
-  color: #234cbc;
-  font-style: normal;
-  text-transform: uppercase;
-  text-decoration: none;
+@media only screen and (min-width: 985px) {
+  header h1 img {
+    height: 96px;
+  }
 }
 
 header #menu_collapser {
@@ -65,7 +67,7 @@ header #menu_collapser {
   text-decoration: none;
   cursor: pointer;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 670px) {
   header #menu_collapser {
     margin: 1.8em 2em 1.8em 0;
     font-size: 1.5em;
@@ -79,12 +81,12 @@ header nav {
 header nav.collapsed {
   display: none;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 670px) {
   header nav {
     display: block !important; /* override collapsed rule */
     clear: none;
     float: right;
-    margin: 2em;
+    margin: 2em 2em 2em 0;
     padding: 0;
   }
 }
@@ -97,7 +99,7 @@ header nav ul li {
   margin-right: 1em;
   display: block;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 670px) {
   header nav ul li {
     display: inline-block;
     border-bottom: 2.5px solid #1491ad;
@@ -107,7 +109,7 @@ header nav ul li.selected,
 header nav ul li:hover {
   display: list-item;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 670px) {
   header nav ul li.selected,
   header nav ul li:hover {
     display: inline-block;
