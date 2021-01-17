@@ -1,28 +1,30 @@
 /*
 Palette
-  background                : #009CCF
-  text                      : #EDED48
-  section border            : #1186a0
-  sitename & nav highlight  : #234cbc
-  nav & heading text        : #2C313F
-  text shadow               : #106c81
+  header background         : "Navy Peony" rgb(27, 45, 75)
+  body background           : "Dusty Turquoise" rgb(83,136,142)
+  nav text                  : #CCC
+  links & nav highlight     : "Lemon curry" rgb(192, 148, 41)
+  text                      : #EEE
+
+  media query breakpoints
+  670px, 985px
 */
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color :#009CCF;
-  font-family: "Josefin Sans",sans-serif;
-  color: #EDED48;
+  background-color :rgb(83,136,142);
+  font-family: "Open Sans",sans-serif;
+  color: #EEE;
 }
 
 /* Header styles */
 
 header {
-  border-bottom: 1px solid #1186a0;
-  color : #2C313F;
+  background-color :rgb(27, 45, 75);
 }
 header::before,
 header::after {
@@ -56,21 +58,20 @@ header h1 img {
 header #menu_collapser {
   display: block;
   float: right;
-  margin: 1em;
-  padding: .2em;
-  font-size: 1.2em;
-  background-color: #234cbc;
-  color: #1491ad;
-  border-radius: 1em;
-  line-height: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
+  margin: 2em;
+  padding-bottom: .4em;
+  color: #EEE;
+  border-bottom: 1px solid #EEE;
+  transition: color .3s, border-color .3s;
   cursor: pointer;
+}
+header #menu_collapser:hover,
+header #menu_collapser.open {
+  color: rgb(192, 148, 41);
+  border-bottom-color: rgb(192, 148, 41);
 }
 @media only screen and (min-width: 670px) {
   header #menu_collapser {
-    margin: 1.8em 2em 1.8em 0;
-    font-size: 1.5em;
     display: none;
   }
 }
@@ -78,16 +79,24 @@ header #menu_collapser {
 header nav {
   clear: both;
 }
-header nav.collapsed {
+header nav {
   display: none;
+}
+header nav.open {
+  display: block;
 }
 @media only screen and (min-width: 670px) {
   header nav {
-    display: block !important; /* override collapsed rule */
+    display: block !important;
     clear: none;
     float: right;
     margin: 2em 2em 2em 0;
     padding: 0;
+  }
+}
+@media only screen and (min-width: 985px) {
+  header nav {
+    margin-top: 2.7em;
   }
 }
 
@@ -99,21 +108,19 @@ header nav ul li {
   margin-right: 1em;
   display: block;
 }
-@media only screen and (min-width: 670px) {
-  header nav ul li {
-    display: inline-block;
-    border-bottom: 2.5px solid #1491ad;
-  }
-}
 header nav ul li.selected,
 header nav ul li:hover {
   display: list-item;
 }
 @media only screen and (min-width: 670px) {
+  header nav ul li {
+    display: inline-block !important; /* override .selected rule */
+    border-bottom: 1px solid #EEE;
+  }
   header nav ul li.selected,
   header nav ul li:hover {
-    display: inline-block;
-    border-bottom: 2.5px solid #234cbc;
+    border-bottom-color: rgb(192, 148, 41);
+    transition: border-color .3s;
   }
 }
 header nav ul li a {
@@ -121,16 +128,12 @@ header nav ul li a {
   line-height: 2em;
   font-weight: bold;
   text-decoration: none;
-  color: #2C313F;
+  color: #EEE;
+  transition: color .3s;
 }
-@media only screen and (min-width: 985px) {
-  header nav ul li a {
-    font-size: 1.5em;
-    line-height: 2.5em;
-  }
-}
+header nav ul li.selected a,
 header nav ul li:hover a {
-  color: #234cbc;
+  color: rgb(192, 148, 41);
 }
 
 /* Main styles */
@@ -147,25 +150,17 @@ main, footer {
 }
 
 main h1 {
-  font-family: 'Tangerine', serif;
-  color : #2C313F;
-  font-size: 3em;
-  font-weight: 100;
-  text-shadow: 4px 4px 4px #106c81;
+  font-size: 2em;
+  font-weight: lighter;
   margin:.3em 0;
 }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 670px) {
   main h1 {
-    font-size: 4em;
+    display: none;
   }
 }
-@media only screen and (min-width: 985px) {
-  main h1 {
-    font-size: 7em;
-  }
-}
+
 main h2 {
-  font-family: "Playfair Display",serif;
   font-size: 1.2em;
 }
 @media only screen and (min-width: 985px) {
@@ -183,16 +178,15 @@ main ul li {
   margin-bottom: .5em;
 }
 
-main p, main li {
-  font-size: 1em
+main p {
+  margin-bottom: 2.5em;
 }
-@media only screen and (min-width: 985px) {
-  main p, main li {
-    font-size: 1.5em
-  }
+main p, main li {
+  font-size: 1em;
+  line-height: 2em;
 }
 main a {
-  color: #EDED48;
+  color: rgb(192, 148, 41);
 }
 main a:hover {
   text-decoration: none;
