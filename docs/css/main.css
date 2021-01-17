@@ -158,12 +158,31 @@ main h1 {
 }
 
 main h2 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
-@media only screen and (min-width: 985px) {
+@media only screen and (min-width: 670px) {
   main h2 {
-    font-size: 1.7em;
+    font-size: 1.2em;
   }
+}
+
+main p {
+  margin-bottom: 2em;
+}
+main p, main li {
+  font-size: .8em;
+  line-height: 1.7em;
+}
+@media only screen and (min-width: 670px) {
+  main p, main li {
+    font-size: 1em;
+  }
+}
+main a {
+  color: rgb(192, 148, 41);
+}
+main a:hover {
+  text-decoration: none;
 }
 
 main ul {
@@ -173,20 +192,6 @@ main ul {
 }
 main ul li {
   margin-bottom: .5em;
-}
-
-main p {
-  margin-bottom: 2.5em;
-}
-main p, main li {
-  font-size: 1em;
-  line-height: 2em;
-}
-main a {
-  color: rgb(192, 148, 41);
-}
-main a:hover {
-  text-decoration: none;
 }
 
 main img {
