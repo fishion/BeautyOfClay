@@ -1,10 +1,11 @@
 /*
 Palette
-  header background         : "Navy Peony" rgb(27, 45, 75)
-  body background           : "Dusty Turquoise" rgb(83,136,142)
-  nav text                  : #CCC
-  links & nav highlight     : "Lemon curry" rgb(192, 148, 41)
-  text                      : #EEE
+  header background : "Navy Peony" rgb(27, 45, 75)
+  body background   : "Dusty Turquoise" rgb(83,136,142)
+  nav text          : #CCC
+  links             : rgb(188, 221, 224)
+  nav highlight     : "Lemon curry" rgb(192, 148, 41)
+  text              : #EEE
 
   media query breakpoints
   670px, 985px
@@ -19,6 +20,9 @@ body {
   background-color :rgb(83,136,142);
   font-family: "Open Sans",sans-serif;
   color: #EEE;
+}
+body.banner {
+  background-color: rgb(27, 45, 75);
 }
 
 /* Header styles */
@@ -195,7 +199,7 @@ main p, main li {
   }
 }
 main a {
-  color: rgb(192, 148, 41);
+  color:rgb(188, 221, 224);
 }
 main a:hover {
   text-decoration: none;
