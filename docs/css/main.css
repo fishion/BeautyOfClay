@@ -21,9 +21,6 @@ body {
   font-family: "Open Sans",sans-serif;
   color: #EEE;
 }
-body.banner {
-  background-color: rgb(27, 45, 75);
-}
 
 /* Header styles */
 
@@ -148,22 +145,6 @@ main, footer {
     width: 60%;
     margin: 3em auto;
   }
-}
-
-main.banner {
-  width: 100%;
-  margin: 0;
-  padding: 3em 20%;
-  font-size: 1.3em;
-}
-main.banner-home {
-  background:url('../img/home.jpg') center;
-}
-
-main.banner > .bannercontent {
-  padding: .5em 1em;
-  border: 1px solid rgb(27, 45, 75);
-  background-color: rgba(0,0,0, 0.3) ;
 }
 
 main h1 {
