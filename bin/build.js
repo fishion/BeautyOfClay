@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 "use strict";
 
+const fs = require('fs');
+
+
+const slideshowImagesDir = `${__dirname}/../docs/img/slideshow`;
 const imagesJsFile = `${__dirname}/../docs/script/banner-slideshow-images.js`;
 const imagesCssFile = `${__dirname}/../docs/css/banner-slideshow-images.css`;
-const images = [
-  '../img/gallery/gallery1.jpg',
-  '../img/gallery/gallery2.jpg',
-  '../img/gallery/gallery19.jpg',
-  '../img/gallery/gallery9.jpg'
-];
-const secondsPerImage = 6;
+const images = fs.readdirSync(slideshowImagesDir, {withFileTypes: true})
+  .filter(item => !item.isDirectory())
+  .map(item => `../img/slideshow/${item.name}`)
 
+const secondsPerImage = 6;
 const fullAnimationTime = images.length * secondsPerImage;
-const keyframePercentPerImage = secondsPerImage*100/fullAnimationTime
-const keyframePercentTransition = keyframePercentPerImage/2
+const keyframePercentPerImage = +(secondsPerImage*100/fullAnimationTime).toFixed(2)
+const keyframePercentTransition = +(keyframePercentPerImage/2).toFixed(2)
 
 /* Build banner css and html */
 
@@ -50,7 +51,6 @@ slideshowCss += `
 `
 
 // Write files
-const fs = require('fs');
 fs.writeFileSync(imagesJsFile, `const bannerSlideshowImages=${JSON.stringify(images)}`)
 fs.writeFileSync(imagesCssFile, slideshowCss)
 

@@ -1,1 +1,1 @@
-const bannerSlideshowImages=["../img/gallery/gallery1.jpg","../img/gallery/gallery2.jpg","../img/gallery/gallery19.jpg","../img/gallery/gallery9.jpg"]
+const bannerSlideshowImages=["../img/slideshow/1.jpg","../img/slideshow/2.jpg","../img/slideshow/3.jpg","../img/slideshow/4.jpg","../img/slideshow/5.jpg","../img/slideshow/6.jpg"]
