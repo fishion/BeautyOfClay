@@ -1,0 +1,11 @@
+{
+  "name": "beautyofclay-scripts",
+  "version": "1.0.0",
+  "description": "scripts for generating beautyofclay.co.uk site",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

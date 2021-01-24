@@ -209,6 +209,50 @@ main.gallery img {
 }
 
 
+/* Banner image slideshow general styling */
+body.withbanner {
+  background-color: rgb(27, 45, 75);
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 3em 20%;
+}
+
+ul.banner-slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  list-style: none;
+  overflow: hidden;
+}
+
+ul.banner-slideshow li span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3em;
+  padding: .5em 1em;
+  border: 1px solid rgb(27, 45, 75);
+  background-color: rgba(0,0,0, 0.3) ;
+}
 
 
 
