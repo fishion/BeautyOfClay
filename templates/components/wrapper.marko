@@ -26,12 +26,12 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="script/site.js"></script>
 
-<if(input.pagename=='index')>
+<if(input.page_index)>
   <link rel="stylesheet" href="css/banner-slideshow-images.css">
   <script src="script/banner-slideshow-images.js"></script>  
 </if>
 
-<if(input.pagename=='gallery' || input.pagename=='workshops')>
+<if(input.page_gallery || input.page_workshops)>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
@@ -42,30 +42,29 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body class="withbanner">
+<body class=(input.page_index && "withbanner")>
 
   <header>
     <h1><a href="/"><img src="img/logo.svg"></a></h1>
     <div id="menu_collapser">Menu</div>
     <nav id="menu">
       <ul>
-        <li class="selected"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class=(input.page_index && "selected")><a href="index.html">Home</a></li>
+        <li class=(input.page_about && "selected")><a href="about.html">About</a></li>
+        <li class=(input.page_workshops && "selected")><a href="workshops.html">Workshops</a></li>
+        <li class=(input.page_gallery && "selected")><a href="gallery.html">Gallery</a></li>
+        <li class=(input.page_contact && "selected")><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="banner-container">
-    $!{input.content}
+  <main class=(input.page_index && "banner-container")>
+    <${input.renderBody}/>
   </main>
 
   <footer>
     <a href="#" target="_blank" class="fa fa-twitter" id="share_twitter" title="Share to twitter"></a>
     <a href="#" target="_blank" class="fa fa-facebook" id="share_facebook" title="Share to facebook"></a>
   </footer>
-
 </body>
 </html>
