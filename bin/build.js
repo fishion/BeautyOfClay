@@ -3,7 +3,6 @@
 
 const fs = require('fs');
 
-
 const slideshowImagesDir = `${__dirname}/../docs/img/slideshow`;
 const imagesJsFile = `${__dirname}/../docs/script/banner-slideshow-images.js`;
 const imagesCssFile = `${__dirname}/../docs/css/banner-slideshow-images.css`;
