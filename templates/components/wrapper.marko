@@ -32,7 +32,6 @@
 
   <if(input.banner_slideshow)>
     <link rel="stylesheet" href="css/banner-slideshow-images.css">
-    <script src="script/banner-slideshow-images.js"></script>  
   </if>
 
   <if(input.gallery)>
@@ -58,7 +57,7 @@
     </nav>
   </header>
 
-  <main class=(input.banner_slideshow && "banner-container")>
+  <main>
     <${input.renderBody}/>
   </main>
 

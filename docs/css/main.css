@@ -219,7 +219,7 @@ body.withbanner {
   background-color: rgb(27, 45, 75);
 }
 
-.banner-container {
+body.withbanner main {
   position: relative;
   width: 100%;
   margin: 0;

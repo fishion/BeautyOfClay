@@ -7,10 +7,19 @@ require('marko/node-require').install({compilerOptions: {
 }});
 const templatesDir = `${__dirname}/../templates`;
 const renderedDir = `${__dirname}/../docs`;
+const slideshowImagesDir = `${__dirname}/../docs/img/slideshow`;
+
 
 const templates = fs.readdirSync(templatesDir, {withFileTypes: true})
   .filter(item => !item.isDirectory())
   .map(item => item.name.replace(/\.marko$/, ""));
+
+  
+const slideshowImages = fs.readdirSync(slideshowImagesDir, {withFileTypes: true})
+  .filter(item => !item.isDirectory())
+  .map(item => `../img/slideshow/${item.name}`)
+
+
 
 for (let i=0; i<templates.length; i++){
   const pagename = templates[i];
@@ -21,7 +30,7 @@ for (let i=0; i<templates.length; i++){
     pagename : {
       [pagename] : true
     },
-    [`page_${pagename}`] : true
+    slideshowImages: slideshowImages,
   }).pipe(writeStream)
   console.log('done');
 }

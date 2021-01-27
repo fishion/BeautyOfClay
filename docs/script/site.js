@@ -22,22 +22,7 @@ const initSocialMediaIcons = () => {
   shareFacebook.href=`http://www.facebook.com/sharer/sharer.php?u=${url}`;
 }
 
-const bannerSlideshow = () => {
-  // banner_slideshow
-  const bannerContainer = document.getElementsByClassName('banner-container')[0];
-  if (!bannerContainer) return;
-  const bannerSlideshow = document.createElement("ul");
-  bannerSlideshow.classList.add("banner-slideshow");
-  bannerContainer.prepend(bannerSlideshow)
-  for (let i=0; i<bannerSlideshowImages.length; i++){
-    const li = document.createElement("li");
-    li.appendChild(document.createElement("span"));
-    bannerSlideshow.appendChild(li)
-  }
-}
-
 window.addEventListener('DOMContentLoaded', () => {
   initMobileMenuCollapser();
-  bannerSlideshow();
   initSocialMediaIcons();
 })
