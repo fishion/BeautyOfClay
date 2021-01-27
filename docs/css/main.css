@@ -19,6 +19,7 @@ Palette
 body {
   background-color :rgb(83,136,142);
   font-family: "Open Sans",sans-serif;
+  font-weight: 300;
   color: #EEE;
 }
 
@@ -124,7 +125,7 @@ header nav ul li {
 header nav ul li a {
   font-size: 1em;
   line-height: 2em;
-  font-weight: bold;
+  font-weight: 400;
   text-decoration: none;
   color: #EEE;
   transition: color .3s;
@@ -149,7 +150,7 @@ main, footer {
 
 main h1 {
   font-size: 2em;
-  font-weight: lighter;
+  font-weight: 400;
   margin:.3em 0;
 }
 @media only screen and (min-width: 670px) {
@@ -160,6 +161,7 @@ main h1 {
 
 main h2 {
   font-size: 1em;
+  font-weight: 400;
 }
 @media only screen and (min-width: 670px) {
   main h2 {
@@ -178,6 +180,9 @@ main p, main li {
   main p, main li {
     font-size: 1em;
   }
+}
+main em {
+  font-weight: 700;
 }
 main a {
   color:rgb(188, 221, 224);
