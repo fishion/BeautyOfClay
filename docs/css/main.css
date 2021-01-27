@@ -106,7 +106,7 @@ header nav ul {
   padding: 0 0 0 2em;
 }
 header nav ul li {
-  margin-right: 1em;
+  margin-right: 1.2em;
   display: block;
   text-align:center;
 }
@@ -258,6 +258,7 @@ ul.banner-slideshow li span {
 
 /* Fontawesome social buttons */
 .fa {
+  margin-right: .5em;
   padding: .5em;
   font-size: 1.5em;
   width: 2em;
