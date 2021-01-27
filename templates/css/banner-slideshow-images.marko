@@ -1,0 +1,36 @@
+$ {
+  const secondsPerImage = input.slideshow.secondsPerImage;
+  const fullAnimationTime = input.slideshow.images.length * secondsPerImage;
+  const keyframePercentPerImage = +(secondsPerImage*100/fullAnimationTime).toFixed(2)
+  const keyframePercentTransition = +(keyframePercentPerImage/2).toFixed(2)
+}
+
+style {
+  .banner-slideshow li span {
+    animation: imageAnimation ${fullAnimationTime}s linear infinite 0s; 
+  }
+  <for|image, i| of=[input.slideshow.images]>
+    .banner-slideshow li:nth-child(${i+1}) span { 
+        background-image: url('${image}');
+        animation-delay: ${i*secondsPerImage}s;
+      }
+  </for>
+
+  @keyframes imageAnimation { 
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    ${keyframePercentTransition}% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    ${keyframePercentPerImage}% {
+      opacity: 1;
+    }
+    ${keyframePercentPerImage + keyframePercentTransition}% {
+      opacity: 0;
+    }
+    100% { opacity: 0 }
+  }
+}
