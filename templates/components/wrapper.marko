@@ -6,6 +6,7 @@
   <title>Beauty of Clay</title>
   <meta name="description" content="I am Monir, I run low-cost pottery and ceramic workshops for people of all ages. No experience is necessary and all materials are provided. If you are interested in attending my weekly pottery workshops, please contact me on mahmoniramiri@gmail.com. My workshops include creating and glazing tiles based on your own design, and ceramic jewellery making.">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="rgb(27, 45, 75)">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Beauty of Clay">
@@ -17,6 +18,8 @@
   <meta property="og:image:width" content="200">
   <meta property="og:image:height" content="200">
 
+  <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg"/>
+
   <!-- site fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   <!-- Social share fonts -->
@@ -26,39 +29,35 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="script/site.js"></script>
 
-<if(input.page_index)>
-  <link rel="stylesheet" href="css/banner-slideshow-images.css">
-  <script src="script/banner-slideshow-images.js"></script>  
-</if>
+  <if(input.banner_slideshow)>
+    <link rel="stylesheet" href="css/banner-slideshow-images.css">
+    <script src="script/banner-slideshow-images.js"></script>  
+  </if>
 
-<if(input.page_gallery || input.page_workshops)>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
-</if>
-
-  <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg"/>
-
-  <meta name="theme-color" content="#fafafa">
+  <if(input.gallery)>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+  </if>
 </head>
 
-<body class=(input.page_index && "withbanner")>
+<body class=(input.banner_slideshow && "withbanner")>
 
   <header>
     <h1><a href="/"><img src="img/logo.svg"></a></h1>
     <div id="menu_collapser">Menu</div>
     <nav id="menu">
       <ul>
-        <li class=(input.page_index && "selected")><a href="index.html">Home</a></li>
-        <li class=(input.page_about && "selected")><a href="about.html">About</a></li>
-        <li class=(input.page_workshops && "selected")><a href="workshops.html">Workshops</a></li>
-        <li class=(input.page_gallery && "selected")><a href="gallery.html">Gallery</a></li>
-        <li class=(input.page_contact && "selected")><a href="contact.html">Contact</a></li>
+        <li class=(input.pagename.index && "selected")><a href="index.html">Home</a></li>
+        <li class=(input.pagename.about && "selected")><a href="about.html">About</a></li>
+        <li class=(input.pagename.workshops && "selected")><a href="workshops.html">Workshops</a></li>
+        <li class=(input.pagename.gallery && "selected")><a href="gallery.html">Gallery</a></li>
+        <li class=(input.pagename.contact && "selected")><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class=(input.page_index && "banner-container")>
+  <main class=(input.banner_slideshow && "banner-container")>
     <${input.renderBody}/>
   </main>
 

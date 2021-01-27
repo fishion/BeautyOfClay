@@ -18,6 +18,9 @@ for (let i=0; i<templates.length; i++){
   const page = require(`${templatesDir}/${pagename}`);
   var writeStream = fs.createWriteStream(`${renderedDir}/${pagename}.html`);
   page.stream({
+    pagename : {
+      [pagename] : true
+    },
     [`page_${pagename}`] : true
   }).pipe(writeStream)
   console.log('done');
