@@ -1,0 +1,24 @@
+<div ID="{{galleryID}}" data-nanogallery2='{
+    "itemsBaseURL": "{{baseURL}}",
+    "thumbnailWidth": "200",
+    "thumbnailBorderVertical": 1,
+    "thumbnailBorderHorizontal": 1,
+    "colorScheme": {
+      "thumbnail": {
+        "background": "rgba(20,145,173,1)"
+      }
+    },
+    "thumbnailDisplayTransition": "scaleUp",
+    "thumbnailDisplayTransitionDuration": 500,
+    "thumbnailDisplayInterval": 50,
+    "thumbnailLabel": {
+      "position": "overImageOnBottom"
+    },
+    "thumbnailHoverEffect2": "scale120",
+    "thumbnailAlignment": "center",
+    "thumbnailGutterWidth": 5,
+    "thumbnailGutterHeight": 5,
+    "thumbnailOpenImage": true
+  }'>
+  {{#each galleryImages as |image|}}<a href="{{image}}" data-ngthumb="{{image}}" data-ngdesc=""></a>{{/each}}
+</div>
