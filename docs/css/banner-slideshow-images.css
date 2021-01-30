@@ -1,37 +1,32 @@
-
   .banner-slideshow li span {
     animation: imageAnimation 36s linear infinite 0s; 
   }
+
     .banner-slideshow li:nth-child(1) span { 
       background-image: url('../img/slideshow/1.jpg');
       animation-delay: 0s;
     }
-  
     .banner-slideshow li:nth-child(2) span { 
       background-image: url('../img/slideshow/2.jpg');
       animation-delay: 6s;
     }
-  
     .banner-slideshow li:nth-child(3) span { 
       background-image: url('../img/slideshow/3.jpg');
       animation-delay: 12s;
     }
-  
     .banner-slideshow li:nth-child(4) span { 
       background-image: url('../img/slideshow/4.jpg');
       animation-delay: 18s;
     }
-  
     .banner-slideshow li:nth-child(5) span { 
       background-image: url('../img/slideshow/5.jpg');
       animation-delay: 24s;
     }
-  
     .banner-slideshow li:nth-child(6) span { 
       background-image: url('../img/slideshow/6.jpg');
       animation-delay: 30s;
     }
-  
+
   @keyframes imageAnimation { 
     0% {
       opacity: 0;
@@ -47,5 +42,7 @@
     25.01% {
       opacity: 0;
     }
-    100% { opacity: 0 }
+    100% {
+      opacity: 0
+    }
   }

@@ -1,0 +1,33 @@
+{{!-- Credit to https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/comment-page-6/#comments --}}
+{{#with slideshow}}
+  .banner-slideshow li span {
+    animation: imageAnimation {{fullAnimationTime}}s linear infinite 0s; 
+  }
+
+  {{#each images as |image index|}}
+    .banner-slideshow li:nth-child({{math index "+" 1}}) span { 
+      background-image: url('{{image}}');
+      animation-delay: {{math index "*" ../secondsPerImage}}s;
+    }
+  {{/each}}
+
+  @keyframes imageAnimation { 
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    {{keyframePercentTransition}}% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    {{keyframePercentPerImage}}% {
+      opacity: 1;
+    }
+    {{math keyframePercentPerImage "+" keyframePercentTransition}}% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0
+    }
+  }
+{{/with}}

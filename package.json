@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "marko": "^4.23.12"
+    "handlebars": "^4.7.6"
   }
 }

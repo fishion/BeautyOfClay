@@ -30,35 +30,35 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="script/site.js"></script>
 
-  <if(input.banner_slideshow)>
+  {{#if banner_slideshow}}
     <link rel="stylesheet" href="css/banner-slideshow-images.css">
-  </if>
+  {{/if}}
 
-  <if(input.gallery)>
+  {{#if gallery}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
-  </if>
+  {{/if}}
 </head>
 
-<body class=(input.banner_slideshow && "withbanner")>
+<body{{#if banner_slideshow}} class="withbanner"{{/if}}>
 
   <header>
     <h1><a href="/"><img src="img/logo.svg"></a></h1>
     <div id="menu_collapser">Menu</div>
     <nav id="menu">
       <ul>
-        <li class=(input.pagename.index && "selected")><a href="index.html">Home</a></li>
-        <li class=(input.pagename.about && "selected")><a href="about.html">About</a></li>
-        <li class=(input.pagename.workshops && "selected")><a href="workshops.html">Workshops</a></li>
-        <li class=(input.pagename.gallery && "selected")><a href="gallery.html">Gallery</a></li>
-        <li class=(input.pagename.contact && "selected")><a href="contact.html">Contact</a></li>
+        <li{{#if pagename.index}} class="selected"{{/if}}><a href="index.html">Home</a></li>
+        <li{{#if pagename.about}} class="selected"{{/if}}><a href="about.html">About</a></li>
+        <li{{#if pagename.workshops}} class="selected"{{/if}}><a href="workshops.html">Workshops</a></li>
+        <li{{#if pagename.gallery}} class="selected"{{/if}}><a href="gallery.html">Gallery</a></li>
+        <li{{#if pagename.contact}} class="selected"{{/if}}><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <${input.renderBody}/>
+    {{{content}}}
   </main>
 
   <footer>
