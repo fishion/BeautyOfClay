@@ -4,11 +4,12 @@
   "description": "scripts for generating beautyofclay.co.uk site",
   "main": "bin/build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "serve docs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "serve": "^11.3.2"
   }
 }
