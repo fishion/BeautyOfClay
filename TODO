@@ -1,2 +1,2 @@
-blend title bar colour
+Switch out build.js to use non-custom handelbars-extended
 put all config in config.config

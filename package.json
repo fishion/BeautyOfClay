@@ -4,6 +4,7 @@
   "description": "scripts for generating beautyofclay.co.uk site",
   "main": "bin/build.js",
   "scripts": {
+    "build": "./bin/build.js",
     "serve": "serve docs"
   },
   "author": "",

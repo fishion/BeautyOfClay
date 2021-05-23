@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="css/main.css?v=1">
   <script src="script/site.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 
 </head>
 
@@ -43,15 +46,42 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="festival.html">Festival '21</a></li>
+        <li class="selected"><a href="festival.html">Festival '21</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>  <h1>Sorry!</h1>
-  <p>I can't find that page. Maybe try to find what you need from the <a href="index.html">Homepage</a></p>
+  <main>  <h1>Festival '21</h1>
+
+  <p>In Persian culture the sun symbolises life, light, hope and happiness.This concept is beautifully express throughout Persian tile design. This collection of Persian tile were created over three months in preparation for the May Brighton Festival 2021 and have been exhibited in Hangleton library for duration of May as part of our place Hangleton.</p>
+
+  <div ID="festivalgallery" data-nanogallery2='{
+    "itemsBaseURL": "img/festival/",
+    "thumbnailWidth": "200",
+    "thumbnailBorderVertical": 1,
+    "thumbnailBorderHorizontal": 1,
+    "colorScheme": {
+      "thumbnail": {
+        "background": "rgba(20,145,173,1)"
+      }
+    },
+    "thumbnailDisplayTransition": "scaleUp",
+    "thumbnailDisplayTransitionDuration": 500,
+    "thumbnailDisplayInterval": 50,
+    "thumbnailLabel": {
+      "position": "overImageOnBottom"
+    },
+    "thumbnailHoverEffect2": "scale120",
+    "thumbnailAlignment": "center",
+    "thumbnailGutterWidth": 5,
+    "thumbnailGutterHeight": 5,
+    "thumbnailOpenImage": true
+  }'>
+  <a href="festival1.jpg" data-ngthumb="festival1.jpg" data-ngdesc=""></a><a href="festival2.jpg" data-ngthumb="festival2.jpg" data-ngdesc=""></a><a href="festival3.jpg" data-ngthumb="festival3.jpg" data-ngdesc=""></a><a href="festival4.jpg" data-ngthumb="festival4.jpg" data-ngdesc=""></a><a href="festival5.jpg" data-ngthumb="festival5.jpg" data-ngdesc=""></a><a href="festival6.jpg" data-ngthumb="festival6.jpg" data-ngdesc=""></a><a href="festival7.jpg" data-ngthumb="festival7.jpg" data-ngdesc=""></a>
+</div>
+  
 </main>
 
     <footer>
