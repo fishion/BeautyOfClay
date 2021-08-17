@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 "use strict";
 
-// set paths
-const templatesDir = `${(__dirname)}/../templates`;
-const renderedDir = `${__dirname}/../docs`;
+const path = require('path');
+//const sass = require('sass');
 
-// require modules
-const fs = require('fs');
-const Handlebars = require('../lib/handlebars/enhanced')(templatesDir, renderedDir);
+const appRoot = path.resolve(__dirname, '..');
+const config = require(path.resolve(appRoot, 'config.json'));
 
-// read file lists & render
-fs.readdirSync(templatesDir, {withFileTypes: true})
-  .filter(item => !item.isDirectory())
-  .forEach(file => Handlebars.render(file.name))
-Handlebars.render("css/banner-slideshow-images.css.hbs", "index");
+// build html files with Handlebars
+require('HandlebarsExtended')({
+  ...config.paths,
+  appRoot     : appRoot
+}).buildSite(config);
+
+// one aditional render to do
+require('HandlebarsExtended')({
+  ...config.paths,
+  appRoot         : appRoot,
+  controllerPath  : 'src/controller/css',
+  outputPath      : 'docs/css'
+}).render("../css/banner-slideshow-images.css.hbs", "index");

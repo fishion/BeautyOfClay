@@ -9,8 +9,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "handlebars": "^4.7.6",
+  "devDependencies": {
+    "handlebarsextended": "github:fishion/HandlebarsExtended",
     "serve": "^11.3.2"
   }
 }
