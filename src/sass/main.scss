@@ -11,6 +11,20 @@ Palette
   670px, 985px
 */
 
+/*****************************************************
+ * Variables
+ *****************************************************/
+/*
+  Media query breakpoints
+*/
+$breakpoint-tablet: 768px; /* phone <-> tablet */
+$breakpoint-small: 1024px; /* tablet <-> small desktop */
+$breakpoint-full: 1280px;  /* small desktop <-> full desktop */
+$breakpoint-large: 2074px;  /* full desktop <-> large desktop */
+
+/*****************************************************
+ * General Styles
+ *****************************************************/
 
 * {
   box-sizing: border-box;
@@ -23,237 +37,194 @@ body {
   color: #EEE;
 }
 
-/* Header styles */
+blockquote {
+  font-style: italic;
+  font-size: .7rem;
+  margin-bottom: 2rem;
+  color: rgb(192, 148, 41);
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.3rem;
+  }
+  &::before,
+  &::after {
+    content: '"';
+  }
+}
 
-header {
+/*****************************************************
+ * Page Structure
+ *****************************************************/
+ 
+ header {
   background-color :rgb(27, 45, 75);
-}
-header::before,
-header::after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-header h1 {
-  float: left;
-  margin: 15px 0 15px 1em;
-  padding: 0;
-}
-header h1 img {
-  height: 56px;
-  padding: 0;
-  margin: 0;
-  display:block;
-}
-@media only screen and (min-width: 670px) {
-  header h1 img {
-    height: 70px;
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
   }
-}
-@media only screen and (min-width: 985px) {
-  header h1 img {
-    height: 96px;
-  }
-}
 
-header #menu_collapser {
-  display: block;
-  float: right;
-  margin: 2em;
-  padding-bottom: .4em;
-  color: #EEE;
-  border-bottom: 1px solid #EEE;
-  transition: color .3s, border-color .3s;
-  cursor: pointer;
-}
-header #menu_collapser:hover,
-header #menu_collapser.open {
-  color: rgb(192, 148, 41);
-  border-bottom-color: rgb(192, 148, 41);
-}
-@media only screen and (min-width: 670px) {
-  header #menu_collapser {
-    display: none;
-  }
-}
-
-header nav {
-  clear: both;
-}
-header nav {
-  display: none;
-}
-header nav.open {
-  display: block;
-}
-@media only screen and (min-width: 670px) {
-  header nav {
-    display: block !important;
-    clear: none;
-    float: right;
-    margin: 2em 2em 2em 0;
+  h1 {
+    float: left;
+    margin: 15px 0 15px 1em;
     padding: 0;
+    img {
+      height: 56px;
+      padding: 0;
+      margin: 0;
+      display:block;
+      @media (min-width: $breakpoint-tablet) {
+        height: 70px;
+      }
+      @media (min-width: $breakpoint-small) {
+        height: 96px;
+      }
+    }
   }
-}
-@media only screen and (min-width: 985px) {
-  header nav {
-    margin-top: 2.7em;
-  }
-}
 
-header nav ul {
-  margin: 0;
-  padding: 0 0 0 2em;
-}
-header nav ul li {
-  margin-right: 1.2em;
-  display: block;
-  text-align:center;
-}
-@media only screen and (min-width: 670px) {
-  header nav ul li {
-    display: inline-block !important; /* override .selected rule */
+  #menu_collapser {
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+    display: block;
+    float: right;
+    margin: 2em;
+    padding-bottom: .4em;
+    color: #EEE;
     border-bottom: 1px solid #EEE;
+    transition: color .3s, border-color .3s;
+    cursor: pointer;
+    &:hover,
+    &.open {
+      color: rgb(192, 148, 41);
+      border-bottom-color: rgb(192, 148, 41);
+    }
   }
-  header nav ul li.selected,
-  header nav ul li:hover {
-    border-bottom-color: rgb(192, 148, 41);
-    transition: border-color .3s;
+
+  nav {
+    display: none;
+    clear: both;
+    @media (min-width: $breakpoint-tablet) {
+      display: block !important;
+      clear: none;
+      float: right;
+      margin: 2em 2em 2em 0;
+      padding: 0;
+    }
+    @media (min-width: $breakpoint-small) {
+      margin-top: 2.7em;
+    }
+    &.open {
+      display: block;
+    }
+    ul {
+      margin: 0;
+      padding: 0 0 0 2em;
+      li {
+        margin-right: 1.2em;
+        display: block;
+        text-align:center;
+        @media (min-width: $breakpoint-tablet) {
+          display: inline-block;
+          border-bottom: 1px solid #EEE;
+          &.selected,
+          &:hover {
+            border-bottom-color: rgb(192, 148, 41);
+            transition: border-color .3s;
+          }
+        }
+        a {
+          font-size: 1em;
+          line-height: 2em;
+          font-weight: 400;
+          text-decoration: none;
+          color: #EEE;
+          transition: color .3s;
+        }
+        &.selected a,
+        &:hover a {
+          color: rgb(192, 148, 41);
+        }
+      }
+    }
   }
-}
-header nav ul li a {
-  font-size: 1em;
-  line-height: 2em;
-  font-weight: 400;
-  text-decoration: none;
-  color: #EEE;
-  transition: color .3s;
-}
-header nav ul li.selected a,
-header nav ul li:hover a {
-  color: rgb(192, 148, 41);
 }
 
-/* Main styles */
 
 main, footer {
   width: 90%;
   margin: 2em auto;
-}
-@media only screen and (min-width: 985px) {
-  main, footer {
+  @media (min-width: $breakpoint-small) {
     width: 60%;
     margin: 3em auto;
   }
 }
 
-main h1 {
-  font-size: 2em;
-  font-weight: 400;
-  margin: .3em 0 .7em;
-  text-align: center;
-}
-@media only screen and (min-width: 670px) {
-  main h1 {
-    display: none;
+main {
+  h1 {
+    font-size: 2em;
+    font-weight: 400;
+    margin: .3em 0 .7em;
+    text-align: center;
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
-}
-
-main h2 {
-  color: rgb(192, 148, 41);
-  font-size: 1em;
-  font-weight: 400;
-}
-@media only screen and (min-width: 670px) {
-  main h2 {
-    font-size: 1.2em;
-  }
-}
-
-main p {
-  margin-bottom: 2em;
-}
-main p, main li {
-  font-size: .8em;
-  line-height: 1.7em;
-}
-@media only screen and (min-width: 670px) {
-  main p, main li {
+  h2 {
+    color: rgb(192, 148, 41);
     font-size: 1em;
+    font-weight: 400;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.2em;
+    }
+  }
+  p {
+    margin-bottom: 2em;
+  }
+  p, li {
+    font-size: .8em;
+    line-height: 1.7em;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1em;
+    }
+  }
+  em {
+    font-weight: 700;
+  }
+  a {
+    color:rgb(188, 221, 224);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  ul {
+    list-style: square;
+    padding-left: 1.5em;
+    li {
+      margin-bottom: .5em;
+    }
+  }
+  img {
+    float: right;
+    margin: 0 0 1em 1em;
+    max-width: 50%;
   }
 }
-main em {
-  font-weight: 700;
-}
-main a {
-  color:rgb(188, 221, 224);
-}
-main a:hover {
-  text-decoration: none;
-}
 
-main ul {
-  list-style: square;
-  padding-left: 1.5em;
-}
-main ul li {
-  margin-bottom: .5em;
-}
-
-main img {
-  float:right;
-  margin: 0 0 1em 1em;
-  max-width: 50%;
-}
-
-main.gallery img {
-  float: none;
-  display: block;
-  max-width: 100%;
-  margin: 1em auto;
-}
-
-/* page sepcific styles */
-#workshopgallery {
-  width: 60%;
-}
-aside.testamonials {
-  clear: both;
-  float: right;
-  width: 40%;
-  background-color :rgb(27, 45, 75, 0.4);
-}
-aside.testamonials blockquote {
-  font-style: italic;
-  font-size: .7rem;
-  margin-bottom: 2rem;
-  color: rgb(192, 148, 41);
-}
-@media only screen and (min-width: 670px) {
-  aside.testamonials blockquote {
-    font-size: 1.3rem;
-  }
-}
-aside.testamonials blockquote::before {
-  content: '"';
-}
-aside.testamonials blockquote::after {
-  content: '"';
-}
+/*****************************************************
+ * Helper styles
+ *****************************************************/
 
 /* Banner image slideshow general styling */
 body.withbanner {
   background-color: rgb(27, 45, 75);
+  main {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 3em 20%;
+  }
 }
-
-body.withbanner main {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 3em 20%;
-}
-
 ul.banner-slideshow {
   position: absolute;
   width: 100%;
@@ -262,22 +233,20 @@ ul.banner-slideshow {
   left: 0px;
   list-style: none;
   overflow: hidden;
+  li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+  }
 }
-
-ul.banner-slideshow li span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  color: transparent;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  z-index: 0;
-}
-
 .banner-content {
   position: relative;
   z-index: 1;
@@ -287,9 +256,7 @@ ul.banner-slideshow li span {
   background-color: rgba(0,0,0, 0.3) ;
 }
 
-
-
-/* Fontawesome social buttons */
+ /* Fontawesome social buttons */
 .fa {
   margin-right: .5em;
   padding: .5em;
@@ -297,15 +264,31 @@ ul.banner-slideshow li span {
   width: 2em;
   text-align: center;
   text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+  }
+  &.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  &.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
 }
-.fa:hover {
-  opacity: 0.7;
+
+
+/*****************************************************
+ * page sepcific styles
+ *****************************************************/
+
+// workshops page
+#workshopgallery {
+  width: 60%;
 }
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
+aside.testamonials {
+  clear: both;
+  float: right;
+  width: 40%;
+  background-color :rgb(27, 45, 75, 0.4);
 }
