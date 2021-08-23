@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "handlebarsextended": "github:fishion/HandlebarsExtended",
+    "sass": "^1.38.0",
     "serve": "^11.3.2"
   }
 }
