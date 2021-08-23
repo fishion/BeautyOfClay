@@ -214,6 +214,33 @@ main.gallery img {
   margin: 1em auto;
 }
 
+/* page sepcific styles */
+#workshopgallery {
+  width: 60%;
+}
+aside.testamonials {
+  clear: both;
+  float: right;
+  width: 40%;
+  background-color :rgb(27, 45, 75, 0.4);
+}
+aside.testamonials blockquote {
+  font-style: italic;
+  font-size: .7rem;
+  margin-bottom: 2rem;
+  color: rgb(192, 148, 41);
+}
+@media only screen and (min-width: 670px) {
+  aside.testamonials blockquote {
+    font-size: 1.3rem;
+  }
+}
+aside.testamonials blockquote::before {
+  content: '"';
+}
+aside.testamonials blockquote::after {
+  content: '"';
+}
 
 /* Banner image slideshow general styling */
 body.withbanner {
