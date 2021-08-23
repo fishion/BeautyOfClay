@@ -7,8 +7,6 @@ Palette
   nav highlight     : "Lemon curry" rgb(192, 148, 41)
   text              : #EEE
 
-  media query breakpoints
-  670px, 985px
 */
 
 /*****************************************************
@@ -17,10 +15,9 @@ Palette
 /*
   Media query breakpoints
 */
-$breakpoint-tablet: 768px; /* phone <-> tablet */
+$breakpoint-tablet: 774px; /* phone <-> tablet */
 $breakpoint-small: 1024px; /* tablet <-> small desktop */
 $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
-$breakpoint-large: 2074px;  /* full desktop <-> large desktop */
 
 /*****************************************************
  * General Styles
@@ -38,9 +35,9 @@ body {
 }
 
 blockquote {
+  margin: 2rem;
   font-style: italic;
-  font-size: .7rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
   color: rgb(192, 148, 41);
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.3rem;
@@ -155,8 +152,11 @@ main, footer {
   width: 90%;
   margin: 2em auto;
   @media (min-width: $breakpoint-small) {
-    width: 60%;
+    width: 80%;
     margin: 3em auto;
+  }
+  @media (min-width: $breakpoint-full) {
+    width: 60%;
   }
 }
 
@@ -283,12 +283,18 @@ ul.banner-slideshow {
  *****************************************************/
 
 // workshops page
-#workshopgallery {
-  width: 60%;
-}
 aside.testamonials {
-  clear: both;
-  float: right;
-  width: 40%;
+  display: inline-block; // otherwise margin of contained blockquotes overflows
   background-color :rgb(27, 45, 75, 0.4);
+  margin-bottom: 2rem;
+  @media (min-width: $breakpoint-tablet) {
+    clear: both;
+    float: right;
+    width: 40%;
+  }
+}
+#workshopgallery {
+  @media (min-width: $breakpoint-tablet) {
+    width: 60%;
+  }
 }
