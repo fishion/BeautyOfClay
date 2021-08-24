@@ -8,6 +8,15 @@
     "sassOutputPath"  : "docs/css",
     "sassFiles"       : ["main", "normalize"]
   },
+  "galleryPaths" : {
+    "gallery" : "img/gallery/",
+    "workshop" : "img/workshop/",
+    "festival" : "img/festival/"
+  },
+  "slideshow" : {
+    "imagesPath" : "img/slideshow",
+    "secondsPerImage": 6
+  },
   "site" : {
     "title"           : "Beauty of Clay",
     "url"             : "https://www.beautyofclay.co.uk",

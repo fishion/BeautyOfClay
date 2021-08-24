@@ -1,17 +1,20 @@
 "use strict";
 
 const fs = require('fs');
+const path = require('path');
 
 // constants
-const imageLocation = 'img/festival/'
+const appRoot = path.resolve(__dirname, '../..');
+const docsRoot = path.join(appRoot, 'docs');
+const config = require(path.resolve(appRoot, 'config.json'));
 
 // workshop images
-const images = fs.readdirSync(`${__dirname}/../../docs/${imageLocation}`, {withFileTypes: true})
+const images = fs.readdirSync(path.join(docsRoot, config.galleryPaths.festival), {withFileTypes: true})
   .filter(item => !item.isDirectory())
   .filter(item => !item.name.match(/^\./)) //filter out dot files
   .map(item => item.name)
 
 module.exports = {
   festivalImages : images,
-  baseURL: imageLocation
+  baseURL: config.galleryPaths.festival
 };
