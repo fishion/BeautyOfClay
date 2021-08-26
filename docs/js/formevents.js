@@ -1,17 +1,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../ContactUsAPIClient/index.js":
-/*!**************************************!*\
-  !*** ../ContactUsAPIClient/index.js ***!
-  \**************************************/
+/***/ "./node_modules/contact-us-api-client/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/contact-us-api-client/index.js ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-const formEvents = __webpack_require__(/*! ./lib/contact-form-events.js */ "../ContactUsAPIClient/lib/contact-form-events.js");
-const recaptchaEvents = __webpack_require__(/*! ./lib/recaptcha-events.js */ "../ContactUsAPIClient/lib/recaptcha-events.js");
+const formEvents = __webpack_require__(/*! ./lib/contact-form-events.js */ "./node_modules/contact-us-api-client/lib/contact-form-events.js");
+const recaptchaEvents = __webpack_require__(/*! ./lib/recaptcha-events.js */ "./node_modules/contact-us-api-client/lib/recaptcha-events.js");
 
 
 module.exports = (config, form) => {
@@ -75,13 +75,13 @@ module.exports = (config, form) => {
 
 /***/ }),
 
-/***/ "../ContactUsAPIClient/lib/contact-form-events.js":
-/*!********************************************************!*\
-  !*** ../ContactUsAPIClient/lib/contact-form-events.js ***!
-  \********************************************************/
+/***/ "./node_modules/contact-us-api-client/lib/contact-form-events.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/contact-us-api-client/lib/contact-form-events.js ***!
+  \***********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const validateFormData  = __webpack_require__(/*! ./validate-form-data.js */ "../ContactUsAPIClient/lib/validate-form-data.js")
+const validateFormData  = __webpack_require__(/*! ./validate-form-data.js */ "./node_modules/contact-us-api-client/lib/validate-form-data.js")
 
 module.exports = function(form, config) {
   // hooks for additional behaviour
@@ -197,10 +197,10 @@ module.exports = function(form, config) {
 
 /***/ }),
 
-/***/ "../ContactUsAPIClient/lib/recaptcha-events.js":
-/*!*****************************************************!*\
-  !*** ../ContactUsAPIClient/lib/recaptcha-events.js ***!
-  \*****************************************************/
+/***/ "./node_modules/contact-us-api-client/lib/recaptcha-events.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/contact-us-api-client/lib/recaptcha-events.js ***!
+  \********************************************************************/
 /***/ ((module) => {
 
 module.exports = (form, secret) => {
@@ -227,10 +227,10 @@ module.exports = (form, secret) => {
 
 /***/ }),
 
-/***/ "../ContactUsAPIClient/lib/validate-form-data.js":
-/*!*******************************************************!*\
-  !*** ../ContactUsAPIClient/lib/validate-form-data.js ***!
-  \*******************************************************/
+/***/ "./node_modules/contact-us-api-client/lib/validate-form-data.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/contact-us-api-client/lib/validate-form-data.js ***!
+  \**********************************************************************/
 /***/ ((module) => {
 
 module.exports = (data, expectedData) => {
@@ -309,8 +309,8 @@ var __webpack_exports__ = {};
 const config = __webpack_require__(/*! ../../config.json */ "./config.json");
 const formElement = document.getElementsByTagName('form')[0];
 
-//const apiClient = require('contact-us-api-client')(config.form, formElement)
-__webpack_require__(/*! ../../../ContactUsAPIClient */ "../ContactUsAPIClient/index.js")(config.form, formElement).addFormEvents();
+// require('../../../ContactUsAPIClient')(config.form, formElement).addFormEvents();
+__webpack_require__(/*! contact-us-api-client */ "./node_modules/contact-us-api-client/index.js")(config.form, formElement).addFormEvents();
 })();
 
 /******/ })()

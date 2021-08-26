@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "contact-us-api-client": "github:fishion/contact-us-api-client",
     "handlebarsextended": "github:fishion/HandlebarsExtended",
     "onchange": "^7.1.0",
     "sass": "^1.38.0",
