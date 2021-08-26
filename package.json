@@ -4,14 +4,18 @@
   "description": "scripts for generating beautyofclay.co.uk site",
   "main": "bin/build.js",
   "scripts": {
-    "build": "./bin/build.js",
+    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' -- npm run build",
+    "build": "./bin/build.js; webpack",
     "serve": "serve docs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "handlebarsextended": "github:fishion/HandlebarsExtended",
+    "onchange": "^7.1.0",
     "sass": "^1.38.0",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
   }
 }

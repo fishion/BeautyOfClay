@@ -19,6 +19,17 @@ $breakpoint-tablet: 774px; /* phone <-> tablet */
 $breakpoint-small: 1024px; /* tablet <-> small desktop */
 $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
 
+:root {
+  --background-colour: rgb(83,136,142);
+  --header-background-colour: rgb(27, 45, 75);
+  --heading-colour: rgb(192, 148, 41);
+
+  // colours
+  --input-bg: rgb(83,136,142);
+  --input-border: rgb(27, 45, 75);
+  --highlight-colour: rgb(192, 148, 41);
+}
+
 /*****************************************************
  * General Styles
  *****************************************************/
@@ -28,7 +39,7 @@ $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
 }
 
 body {
-  background-color :rgb(83,136,142);
+  background-color : var(--background-colour);
   font-family: "Open Sans",sans-serif;
   font-weight: 300;
   color: #EEE;
@@ -38,7 +49,7 @@ blockquote {
   margin: 2rem;
   font-style: italic;
   font-size: 1rem;
-  color: rgb(192, 148, 41);
+  color: var(--heading-colour);
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.3rem;
   }
@@ -48,12 +59,88 @@ blockquote {
   }
 }
 
+form {
+  width: 100%;
+  > div {
+    position: relative;
+    margin: 1rem auto;
+    text-align: left;
+    font-size: 1.5rem;
+    @media (min-width: $breakpoint-tablet) {
+      width: 80%;
+      max-width: 600px
+    }
+    @media (min-width: $breakpoint-small) {
+      max-width: 800px
+    }
+    p {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      font-size: 1.5rem;
+      &.error {
+        color: red;
+      }
+      &.success {
+        color: green;
+      }
+    }
+    input, textarea {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 4.5rem;
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      padding: 2rem 1.5rem 1rem;
+      &:focus {
+        outline-style: none;
+        border-color: var(--highlight-colour);
+      }
+      &:focus + label,
+      &.hascontent + label {
+        font-size: 1rem;
+        top: 4px;
+        color: var(--highlight-colour)
+      }
+    }
+    textarea {
+      height: 15rem;
+    }
+    label {
+      position: absolute;
+      top: 1rem; left: 1.5rem;
+      text-align: left;
+      font-size: 1.5rem;
+      pointer-events: none;
+      transition: all .2s ease-in-out;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background: none;
+      border: 2px solid var(--input-border);
+      padding: 1rem 1.7rem 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: .3rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--input-border);
+        color: white;
+      }
+      transition: all .4s ease-in-out;
+    }
+  }
+}
+
 /*****************************************************
  * Page Structure
  *****************************************************/
  
  header {
-  background-color :rgb(27, 45, 75);
+  background-color : var(--header-background-colour);
   &::before,
   &::after {
     content: " ";

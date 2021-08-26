@@ -42,6 +42,11 @@
   {{#if banner_slideshow}}
     <link rel="stylesheet" href="css/banner-slideshow-images.css">
   {{/if}}
+  
+  {{#if pagename.is.contact }}
+    <script defer src="js/formevents.js"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js?onload=initForm&render=explicit" ></script>
+  {{/if}}
 </head>
 
 <body{{#if banner_slideshow}} class="withbanner"{{/if}}>

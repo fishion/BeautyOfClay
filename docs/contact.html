@@ -34,6 +34,9 @@
   <script src="script/site.js"></script>
 
 
+  
+    <script defer src="js/formevents.js"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js?onload=initForm&render=explicit" ></script>
 </head>
 
 <body>
@@ -53,9 +56,34 @@
     </nav>
   </header>
 
-  <main>  <h1>Contact</h1>
+  <main>  <h1>Contact Us</h1>
 
-  <p>For any further information or enquires, please contact me at <a href="mailto:info@beautyofclay.co.uk">info@beautyofclay.co.uk</a>.</p>
+  
+      <form>
+        <div id="form_generalError"></div>
+        
+        <div id="formField_name">
+           <input type="text" name="name">
+           <label>Name</label>
+         </div>
+        <div id="formField_email">
+           <input type="text" name="email">
+           <label>Email *</label>
+         </div>
+        <div id="formField_whereHear">
+           <input type="text" name="whereHear">
+           <label>Where did you hear about us</label>
+         </div>
+        <div id="formField_message">
+           <textarea name="message"></textarea>
+           <label>Message</label>
+         </div>
+        <div>
+          <button type="button">Send</button>
+        </div>
+      </form>
+    
+  
 </main>
 
     <footer>
