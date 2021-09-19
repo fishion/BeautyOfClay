@@ -1,2 +1,5 @@
-Switch out build.js to use non-custom handelbars-extended
-put all config in config.config
+Set to send contact form requests to monir
+
+Add 'Events' page, like a contact page, to collect order details - driven by JSON list of events & prices?
+
+convert to REM and use CSS variables for better responsive scaling 

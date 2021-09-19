@@ -10,15 +10,14 @@
 "use strict";
 
 
-const formEvents = __webpack_require__(/*! ./lib/contact-form-events.js */ "./node_modules/contact-us-api-client/lib/contact-form-events.js");
-const recaptchaEvents = __webpack_require__(/*! ./lib/recaptcha-events.js */ "./node_modules/contact-us-api-client/lib/recaptcha-events.js");
-
+const formEvents        = __webpack_require__(/*! ./lib/form-events.js */ "./node_modules/contact-us-api-client/lib/form-events.js");
+const recaptchaEvents   = __webpack_require__(/*! ./lib/recaptcha-events.js */ "./node_modules/contact-us-api-client/lib/recaptcha-events.js");
+const validateFormData  = __webpack_require__(/*! ./lib/validate-form-data.js */ "./node_modules/contact-us-api-client/lib/validate-form-data.js");
 
 module.exports = (config, form) => {
-  const fields = config.expectedFormData;
 
   function generateForm() {
-    const fieldsHTML = fields.map(field => {
+    const fieldsHTML = config.expectedFormData.map(field => {
       const formEl = field.name == 'message' ?
         `<textarea name="${field.name}"></textarea>` :
         `<input type="text" name="${field.name}">`
@@ -51,7 +50,7 @@ module.exports = (config, form) => {
     if (contentClass) fe.addContentClass();
 
     if (recaptcha){
-      // set initForm method on wendow object, so grecaptcha can call it once loaded
+      // set initForm method on window object, so grecaptcha can call it once loaded
       window.initForm = () => {
         const re = recaptchaEvents(form, config['recaptcha2-site-secret']);
         fe.afterSubmit = () => { grecaptcha.reset() } // reset catpcha after submit
@@ -68,17 +67,18 @@ module.exports = (config, form) => {
 
 
   return {
-    generateForm  : generateForm,
-    addFormEvents : addFormEvents
+    generateForm      : generateForm,
+    addFormEvents     : addFormEvents,
+    validateFormData  : validateFormData,
   };
 }
 
 /***/ }),
 
-/***/ "./node_modules/contact-us-api-client/lib/contact-form-events.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/contact-us-api-client/lib/contact-form-events.js ***!
-  \***********************************************************************/
+/***/ "./node_modules/contact-us-api-client/lib/form-events.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/contact-us-api-client/lib/form-events.js ***!
+  \***************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const validateFormData  = __webpack_require__(/*! ./validate-form-data.js */ "./node_modules/contact-us-api-client/lib/validate-form-data.js")
@@ -135,6 +135,8 @@ module.exports = function(form, config) {
     this.afterSubmit()
   }
 
+  // private methods 
+
   function _clearFeedback () {
     const errorTexts = form.getElementsByClassName('error');
     const successTexts = form.getElementsByClassName('success');
@@ -154,6 +156,7 @@ module.exports = function(form, config) {
     const textareaFields = form.getElementsByTagName('textarea');
     [...inputFields, ...textareaFields].forEach(el => {
       el.value = '';
+      el.classList.remove('hascontent');
     })
   }
 
@@ -184,10 +187,10 @@ module.exports = function(form, config) {
   }
 
   return {
+    afterSubmit     : afterSubmit,
     addContentClass : addContentClass,
     validate        : validate,
-    submitForm      : submitForm,
-    afterSubmit     : afterSubmit
+    submitForm      : submitForm
   }
 }
 
