@@ -287,10 +287,24 @@ main {
     }
   }
   ul {
-    list-style: square;
+    list-style: "🌻";
     padding-left: 1.5em;
     li {
       margin-bottom: .5em;
+    }
+  }
+  dl {
+    dt {
+      font-weight: 700;
+      &::before {
+        content: '🌻🌻';
+      }
+    }
+    dd {
+      margin-bottom: 1em;
+      strong {
+        font-weight: 600;
+      }
     }
   }
   img {
