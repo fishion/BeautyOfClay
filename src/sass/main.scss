@@ -328,8 +328,15 @@ main {
   }
   .workshop-list {
     clear: both;
-    &.workshop-list-empty {
+    > p.none-scheduled,
+    > p.loading {
       display: none;
+    }
+    &.workshop-list-empty > p.none-scheduled {
+      display: block;
+    }
+    &.loading > p.loading {
+      display: block;
     }
     .article-grid {
       display: grid;
@@ -458,14 +465,4 @@ aside.testamonials {
   display: inline-block; // otherwise margin of contained blockquotes overflows
   background-color: var(--highlight2-colour);
   margin-bottom: 2rem;
-  @media (min-width: $breakpoint-tablet) {
-    clear: both;
-    float: right;
-    width: 40%;
-  }
-}
-#workshopgallery {
-  @media (min-width: $breakpoint-tablet) {
-    width: 60%;
-  }
 }
