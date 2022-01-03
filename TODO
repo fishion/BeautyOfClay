@@ -1,5 +1,10 @@
-Set to send contact form requests to monir
+Features
+  Make email from form 'reply to' provided email address
 
-Add 'Events' page, like a contact page, to collect order details - driven by JSON list of events & prices?
-
-convert to REM and use CSS variables for better responsive scaling 
+general
+  convert to REM and use CSS variables for better responsive scaling 
+  get rid of html extensions
+  Host js rather than using public cdn versions
+  npm audit - check out insecurities
+  split config for build vs site
+  Add in contentSecurityPolicy
