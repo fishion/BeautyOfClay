@@ -350,11 +350,17 @@ main {
         }
         a.button {
           display: inline;
-          font-size: .8rem;
+          font-size: .5rem;
+          margin-left: 0;
+          padding: .1rem 0.3rem;
+          @media (min-width: $breakpoint-tablet) {
+            font-size: .8rem;
+            margin: 0 1em;
+            padding: .1rem 1rem;
+          }
           letter-spacing: .15rem;
-          margin: 0 1em;
+          white-space: nowrap;
           border-width: 1px;
-          padding: .1rem 1rem;
           text-decoration: none;
           text-align: center;
         }
