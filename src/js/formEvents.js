@@ -1,7 +1,7 @@
 "use strict";
 
-const config = require('../../config.json');
+const formConfig = require('../../config.json').form;
 const formElement = document.getElementsByTagName('form')[0];
 
-// require('../../../ContactUsAPIClient')(config.form, formElement).addFormEvents();
-require('contact-us-api-client')(config.form, formElement).addFormEvents();
+// require('../../../ContactUsAPIClient')(formConfig, formElement).addFormEvents();
+require('contact-us-api-client')(formConfig, formElement).addFormEvents();

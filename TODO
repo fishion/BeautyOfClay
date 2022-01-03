@@ -1,10 +1,5 @@
-Features
-  Make email from form 'reply to' provided email address
-
 general
   convert to REM and use CSS variables for better responsive scaling 
   get rid of html extensions
-  Host js rather than using public cdn versions
-  npm audit - check out insecurities
-  split config for build vs site
+  Host js for gallery, rather than using public cdn versions
   Add in contentSecurityPolicy
