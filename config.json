@@ -1,4 +1,14 @@
 {
+  "site" : {
+    "title"           : "Beauty of Clay",
+    "url"             : "https://www.beautyofclay.co.uk",
+    "description"     : "I am Monir, I run low-cost pottery and ceramic workshops for people of all ages. No experience is necessary and all materials are provided. If you are interested in attending my weekly pottery workshops, please contact me on mahmoniramiri@gmail.com. My workshops include creating and glazing tiles based on your own design, and ceramic jewellery making.",
+    "og-description"  : "#pottery #clay #beauty #art #DIY",
+    "og-type"         : "Low-cost pottery and ceramic workshops for people of all ages",
+    "author"          : "Maytree House Studios",
+    "themeColour"     : "rgb(27, 45, 75)",
+    "twitterHandle"   : ""
+  },
   "paths" : {
     "controllerPath"  : "src/controller",
     "pagesPath"       : "src/view/page",
@@ -17,15 +27,8 @@
     "imagesPath" : "img/slideshow",
     "secondsPerImage": 6
   },
-  "site" : {
-    "title"           : "Beauty of Clay",
-    "url"             : "https://www.beautyofclay.co.uk",
-    "description"     : "I am Monir, I run low-cost pottery and ceramic workshops for people of all ages. No experience is necessary and all materials are provided. If you are interested in attending my weekly pottery workshops, please contact me on mahmoniramiri@gmail.com. My workshops include creating and glazing tiles based on your own design, and ceramic jewellery making.",
-    "og-description"  : "#pottery #clay #beauty #art #DIY",
-    "og-type"         : "Low-cost pottery and ceramic workshops for people of all ages",
-    "author"          : "Maytree House Studios",
-    "themeColour"     : "rgb(27, 45, 75)",
-    "twitterHandle"   : ""
+  "workshops" : {
+    "workshopAPI" : "https://api.maytreehousestudios.co.uk/eventbrite-events"
   },
   "form" : {
     "recaptcha2-site-secret" : "6LdOWmkaAAAAAAXH3BvOKcI2wrq53-qq3bjtSR2s",
