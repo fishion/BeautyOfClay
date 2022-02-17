@@ -12,6 +12,7 @@ const config = require(path.resolve(appRoot, 'config.json'));
 const images = fs.readdirSync(path.join(docsRoot, config.galleryPaths.gallery), {withFileTypes: true})
   .filter(item => !item.isDirectory())
   .filter(item => !item.name.match(/^\./)) //filter out dot files
+  .reverse() // put newest images first
   .map(item => item.name)
 
 module.exports = {
