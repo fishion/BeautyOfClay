@@ -6,7 +6,7 @@
   "scripts": {
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' -- npm run build",
     "build": "./bin/build.js; webpack",
-    "serve": "serve docs"
+    "serve": "serve -l 4000 docs"
   },
   "author": "",
   "license": "ISC",
