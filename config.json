@@ -21,7 +21,7 @@
   "galleryPaths" : {
     "gallery" : "img/gallery/",
     "workshop" : "img/workshop/",
-    "festival" : "img/festival/"
+    "exhibitions" : "img/exhibitions/"
   },
   "slideshow" : {
     "imagesPath" : "img/slideshow",
