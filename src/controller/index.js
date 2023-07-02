@@ -20,7 +20,7 @@ const secondsPerImage = config.slideshow.secondsPerImage
 
 // calculated values
 slideshow.secondsPerImage = secondsPerImage
-slideshow.fullAnimationTime = slideshow.images.length * secondsPerImage,
+slideshow.fullAnimationTime = slideshow.images.length * secondsPerImage
 slideshow.keyframePercentPerImage = +(secondsPerImage * 100 / slideshow.fullAnimationTime).toFixed(2)
 slideshow.keyframePercentTransition = +(slideshow.keyframePercentPerImage / 2).toFixed(2)
 

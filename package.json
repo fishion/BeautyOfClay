@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
-    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' -- npm run build",
-    "build": "./bin/build.js; webpack",
-    "serve": "serve -l 4000 docs"
+    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' 'config.json' 'webpack.config.js' -- npm run build",
+    "build": "webpack; sass src/sass:docs/css --style compressed",
+    "serve": "serve -p 4000 -c ../.serve.json docs"
   },
   "author": "",
   "license": "ISC",

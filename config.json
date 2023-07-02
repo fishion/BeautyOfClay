@@ -12,8 +12,8 @@
   "paths" : {
     "controllerPath"  : "src/controller",
     "pagesPath"       : "src/view/page",
-    "wrappersPath"    : "src/view/partials/wrappers",
-    "includesPath"    : "src/view/partials/includes",
+    "wrappersPath"    : "src/view/component/wrappers",
+    "includesPath"    : "src/view/component/includes",
     "sassInputPath"   : "src/sass",
     "sassOutputPath"  : "docs/css",
     "sassFiles"       : ["main", "normalize"]
