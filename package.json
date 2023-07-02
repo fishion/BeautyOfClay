@@ -4,6 +4,8 @@
   "description": "scripts for generating beautyofclay.co.uk site",
   "main": "bin/build.js",
   "scripts": {
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' -- npm run build",
     "build": "./bin/build.js; webpack",
     "serve": "serve -l 4000 docs"
@@ -12,11 +14,14 @@
   "license": "ISC",
   "devDependencies": {
     "contact-us-api-client": "github:fishion/contact-us-api-client",
+    "eslint": "^8.34.0",
+    "eslint-config-standard": "^17.0.0",
+    "handlebars-webpack-plugin": "^2.2.1",
     "handlebarsextended": "github:fishion/HandlebarsExtended",
     "onchange": "^7.1.0",
     "sass": "^1.38.0",
     "serve": "^13.0.2",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

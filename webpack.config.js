@@ -1,14 +1,14 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
-  entry: {
+  entry : {
     formevents : './src/js/formevents.js',
-    workshops : './src/js/workshops.js',
+    workshops : './src/js/workshops.js'
   },
   // mode: 'development', devtool: false,
-  mode: 'production',
-  output: {
-    filename: '[name].js',
-    path: path.join(__dirname, 'docs/js'),
+  mode : 'production',
+  output : {
+    filename : '[name].js',
+    path : path.join(__dirname, 'docs/js')
   }
 }
