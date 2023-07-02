@@ -16,7 +16,8 @@
     "includesPath"    : "src/view/component/includes",
     "sassInputPath"   : "src/sass",
     "sassOutputPath"  : "docs/css",
-    "sassFiles"       : ["main", "normalize"]
+    "sassFiles"       : ["main", "normalize"],
+    "outputBuildPath" : "docs"
   },
   "galleryPaths" : {
     "gallery" : "img/gallery/",
