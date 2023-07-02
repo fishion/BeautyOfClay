@@ -23,7 +23,7 @@ const workshopAPI = require('../../config.json').workshops.workshopAPI
   , displayEvents = (groupedEvents) => {
     Object.keys(groupedEvents).forEach(category => {
       const section = document.getElementById(`${category}-sessions`)
-      if (Object.keys(groupedEvents[category]).length == 0) {
+      if (Object.keys(groupedEvents[category]).length === 0) {
         section.classList.add('workshop-list-empty')
       } else {
         section.getElementsByClassName('article-grid')[0].innerHTML = eventsHTML(groupedEvents[category])
