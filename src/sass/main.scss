@@ -326,6 +326,17 @@ main {
       max-width: 50%;
     }
   }
+  a.kayaklink {
+    display: block;
+    text-align: center;
+    > img {
+      float: none;
+      border: none;
+      width: 250px;
+      height: 100px;
+      max-width: none;
+    }
+  }
   .workshop-list {
     clear: both;
     > p.none-scheduled,
