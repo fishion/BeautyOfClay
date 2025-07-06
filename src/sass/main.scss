@@ -442,7 +442,14 @@ ul.banner-slideshow {
   padding: .5em 1em;
   color: white;
   border: 1px solid rgb(27, 45, 75);
-  background-color: rgba(0,0,0, 0.3) ;
+  background-color: rgba(0,0,0, 0.3);
+  a {
+    color: white;
+    text-decoration: underline dashed;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
  /* Fontawesome social buttons */
