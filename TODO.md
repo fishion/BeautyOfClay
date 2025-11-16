@@ -1,0 +1,15 @@
+# TODO
+
+* Right now
+  * Convert to typescript
+  * Use all site template conventions
+  * Make build to dist, build using gitlab actions, don't commit dist
+
+* Bugs
+  * Contact page catcha is broken?
+
+* General
+  * convert to REM and use CSS variables for better responsive scaling 
+  * get rid of html extensions
+  * Host js for gallery, rather than using public cdn versions
+  * Add in contentSecurityPolicy
