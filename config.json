@@ -17,7 +17,7 @@
     "sassInputPath"   : "src/sass",
     "sassOutputPath"  : "docs/css",
     "sassFiles"       : ["main", "normalize"],
-    "outputBuildPath" : "docs"
+    "outputBuildPath" : "dist"
   },
   "galleryPaths" : {
     "gallery" : "img/gallery/general/",

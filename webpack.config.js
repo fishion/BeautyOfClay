@@ -42,9 +42,9 @@ export default {
   // mode: 'development', devtool: false,
   mode: "production",
   entry: {
-    site: "./src/site-scripts/site.js",
-    formevents: "./src/site-scripts/formevents.js",
-    workshops: "./src/site-scripts/workshops.js",
+    site: "./src/site-scripts/site.ts",
+    formevents: "./src/site-scripts/formevents.ts",
+    workshops: "./src/site-scripts/workshops.ts",
   },
   output: {
     filename: "[name].js",

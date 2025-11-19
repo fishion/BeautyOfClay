@@ -1,7 +1,10 @@
 {
   "name": "beautyofclay",
-  "version": "1.0.0",
   "description": "scripts for generating beautyofclay.co.uk site",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "version": "1.0.0",
   "main": "bin/build.js",
   "scripts": {
     "lint": "eslint . --fix",
@@ -10,10 +13,8 @@
     "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
     "serve": "serve -p 4000 -c ../.serve.json dist"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "contact-us-api-client": "github:fishion/contact-us-api-client",
+    "contact-us-api-client": "github:fishion/contact-us-api-client#v2.0.0",
     "copy-webpack-plugin": "^13.0.1",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
@@ -22,6 +23,7 @@
     "onchange": "^7.1.0",
     "sass": "^1.38.0",
     "serve": "^14.2.0",
+    "ts-loader": "^9.5.4",
     "tsx": "^4.20.6",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
