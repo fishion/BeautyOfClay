@@ -2,7 +2,7 @@
   "name": "beautyofclay",
   "description": "scripts for generating beautyofclay.co.uk site",
   "type": "module",
-  "author": "",
+  "author": "alex@monney.me",
   "license": "ISC",
   "version": "1.0.0",
   "main": "bin/build.js",
@@ -12,8 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.js' -- npm run build",
-    "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
-    "serve": "serve -p 4000 -c ../.serve.json dist",
+    "build": "webpack --config webpack.config.js && sass src/sass:docs/css --style compressed",
+    "serve": "serve -p 4000 -c ../.serve.json docs",
     "prepare": "husky"
   },
   "devDependencies": {
