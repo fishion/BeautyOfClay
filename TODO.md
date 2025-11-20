@@ -1,15 +1,9 @@
 # TODO
 
-* Right now
-  * Convert to typescript
-  * Use all site template conventions
-  * Make build to dist, build using gitlab actions, don't commit dist
+- Test contact us page safely
 
-* Bugs
-  * Contact page catcha is broken?
-
-* General
-  * convert to REM and use CSS variables for better responsive scaling 
-  * get rid of html extensions
-  * Host js for gallery, rather than using public cdn versions
-  * Add in contentSecurityPolicy
+- General
+  - Host js for gallery, rather than using public cdn versions
+  - convert to REM and use CSS variables for better responsive scaling
+  - Add in contentSecurityPolicy
+  - Make build to dist, build dist using gitlab actions?, get rid of docs. This would be more consistent, but probably only worth it if mosving hosting elsewhere.
