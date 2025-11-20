@@ -1,56 +1,58 @@
 {
-  "site" : {
-    "title"           : "Beauty of Clay",
-    "url"             : "https://www.beautyofclay.co.uk",
-    "description"     : "I am Monir, I run low-cost pottery and ceramic workshops for people of all ages. No experience is necessary and all materials are provided. If you are interested in attending my weekly pottery workshops, please contact me on mahmoniramiri@gmail.com. My workshops include creating and glazing tiles based on your own design, and ceramic jewellery making.",
-    "og-description"  : "#pottery #clay #beauty #art #DIY",
-    "og-type"         : "Low-cost pottery and ceramic workshops for people of all ages",
-    "author"          : "Maytree House Studios",
-    "themeColour"     : "rgb(27, 45, 75)",
-    "twitterHandle"   : ""
+  "site": {
+    "title": "Beauty of Clay",
+    "url": "https://www.beautyofclay.co.uk",
+    "description": "I am Monir, I run low-cost pottery and ceramic workshops for people of all ages. No experience is necessary and all materials are provided. If you are interested in attending my weekly pottery workshops, please contact me on mahmoniramiri@gmail.com. My workshops include creating and glazing tiles based on your own design, and ceramic jewellery making.",
+    "og-description": "#pottery #clay #beauty #art #DIY",
+    "og-type": "Low-cost pottery and ceramic workshops for people of all ages",
+    "author": "Maytree House Studios",
+    "themeColour": "rgb(27, 45, 75)",
+    "twitterHandle": ""
   },
-  "paths" : {
-    "controllerPath"  : "src/controller",
-    "pagesPath"       : "src/view/page",
-    "wrappersPath"    : "src/view/component/wrappers",
-    "includesPath"    : "src/view/component/includes",
-    "sassInputPath"   : "src/sass",
-    "sassOutputPath"  : "docs/css",
-    "sassFiles"       : ["main", "normalize"],
-    "outputBuildPath" : "dist"
+  "paths": {
+    "controllerPath": "src/controller",
+    "pagesPath": "src/view/page",
+    "wrappersPath": "src/view/component/wrappers",
+    "includesPath": "src/view/component/includes",
+    "sassInputPath": "src/sass",
+    "sassOutputPath": "docs/css",
+    "sassFiles": ["main", "normalize"],
+    "outputBuildPath": "dist"
   },
-  "galleryPaths" : {
-    "gallery" : "img/gallery/general/",
-    "childrensArtImages" : "img/gallery/childrensArtImages/",
-    "workshop" : "img/workshop/",
-    "exhibitions" : "img/exhibitions/"
+  "galleryPaths": {
+    "gallery": "img/gallery/general/",
+    "childrensArtImages": "img/gallery/childrensArtImages/",
+    "workshop": "img/workshop/",
+    "exhibitions": "img/exhibitions/"
   },
-  "slideshow" : {
-    "imagesPath" : "img/slideshow",
+  "slideshow": {
+    "imagesPath": "img/slideshow",
     "secondsPerImage": 6
   },
-  "workshops" : {
-    "workshopAPI" : "https://api.maytreehousestudios.co.uk/eventbrite-events"
+  "workshops": {
+    "workshopAPI": "https://api.maytreehousestudios.co.uk/eventbrite-events"
   },
-  "form" : {
-    "recaptcha2-site-secret" : "6LdOWmkaAAAAAAXH3BvOKcI2wrq53-qq3bjtSR2s",
-    "contactUsAPI" : "https://api.maytreehousestudios.co.uk/contact-us",
-    "siteKey" : "beautyofclay",
-    "expectedFormData" : [
-      { "name" : "name",
-        "niceName" : "Name" },
-      { "name" : "email",
-        "niceName" : "Email",
-        "validation" : {
-          "type" : "email",
-          "error" : "Please enter a valid Email Address"
+  "form": {
+    "recaptcha2-site-secret": "6LdOWmkaAAAAAAXH3BvOKcI2wrq53-qq3bjtSR2s",
+    "contactUsAPI": "https://api.maytreehousestudios.co.uk/contact-us",
+    "siteKey": "beautyofclay",
+    "expectedFormData": [
+      { "name": "name", "niceName": "Name" },
+      {
+        "name": "email",
+        "niceName": "Email",
+        "validation": {
+          "type": "email",
+          "error": "Please enter a valid Email Address"
         },
-        "required" : "No email address provided" },
-      { "name" : "whereHear",
-        "niceName" : "Where did you hear about us" },
-      { "name" : "message",
-        "niceName" : "Message",
-        "required" : "Please enter your message to us here"}
+        "required": "No email address provided"
+      },
+      { "name": "whereHear", "niceName": "Where did you hear about us" },
+      {
+        "name": "message",
+        "niceName": "Message",
+        "required": "Please enter your message to us here"
+      }
     ]
   }
 }

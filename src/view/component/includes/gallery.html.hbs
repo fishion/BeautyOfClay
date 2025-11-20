@@ -1,4 +1,6 @@
-<div ID="{{galleryID}}" data-nanogallery2='{
+<div
+  id="{{galleryID}}"
+  data-nanogallery2='{
     "itemsBaseURL": "{{baseURL}}",
     "thumbnailWidth": "200",
     "thumbnailBorderVertical": 1,
@@ -19,6 +21,8 @@
     "thumbnailGutterWidth": 5,
     "thumbnailGutterHeight": 5,
     "thumbnailOpenImage": true
-  }'>
-  {{#each galleryImages as |image|}}<a href="{{image}}" data-ngthumb="{{image}}" data-ngdesc=""></a>{{/each}}
+  }'
+>
+  {{#each galleryImages as |image|}}<a href="{{image}}" data-ngthumb="{{image}}" data-ngdesc=""></a
+  >{{/each}}
 </div>

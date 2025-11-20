@@ -1,14 +1,20 @@
-  <header>
-    <h1><a href="/"><img src="img/logo.svg"></a></h1>
-    <div id="menu_collapser">Menu</div>
-    <nav id="menu">
-      <ul>
-        <li{{#if pagename.is.index}} class="selected"{{/if}}><a href="index.html">Home</a></li>
-        <li{{#if pagename.is.about}} class="selected"{{/if}}><a href="about.html">About</a></li>
-        <li{{#if pagename.is.workshops}} class="selected"{{/if}}><a href="workshops.html">Workshops</a></li>
-        <li{{#if pagename.is.exhibitions}} class="selected"{{/if}}><a href="exhibitions.html">Exhibitions</a></li>
-        <li{{#if pagename.is.gallery}} class="selected"{{/if}}><a href="gallery.html">Gallery</a></li>
-        <li{{#if pagename.is.contact}} class="selected"{{/if}}><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>
+    <a href="/"><img src="img/logo.svg" /></a>
+  </h1>
+  <div id="menu_collapser">Menu</div>
+  <nav id="menu">
+    <ul>
+      <li class="{{#if pagename.is.index}}selected{{/if}}"><a href="index.html">Home</a></li>
+      <li class="{{#if pagename.is.about}}selected{{/if}}"><a href="about.html">About</a></li>
+      <li class="{{#if pagename.is.workshops}}selected{{/if}}">
+        <a href="workshops.html">Workshops</a>
+      </li>
+      <li class="{{#if pagename.is.exhibitions}}selected{{/if}}">
+        <a href="exhibitions.html">Exhibitions</a>
+      </li>
+      <li class="{{#if pagename.is.gallery}}selected{{/if}}"><a href="gallery.html">Gallery</a></li>
+      <li class="{{#if pagename.is.contact}}selected{{/if}}"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,17 +1,21 @@
-{{#wrap "wrapper"
-  gallery=true
-}}
-  <h1>Gallery</h1>
+{{#wrap "wrapper" gallery=true }}
+<h1>Gallery</h1>
 
-  <h2>Children's work</h2>
-  <p>I have recently been exploring my own art through children's drawings which I am finding very fascinating. Kids drawings are a precious &amp; valuable form of art that can offer unique insights into their minds and imagination. They are full of creativity, freedom and innocence. I believe each child is an artist who has an infinite ability to create art pieces that are not comparable with any other art form.</p>
-  
-  {{{include "gallery" galleryID="childrens" galleryImages=childrensArtImages.images baseURL=childrensArtImages.baseURL}}}
+<h2>Children's work</h2>
+<p>
+  I have recently been exploring my own art through children's drawings which I am finding very
+  fascinating. Kids drawings are a precious &amp; valuable form of art that can offer unique
+  insights into their minds and imagination. They are full of creativity, freedom and innocence. I
+  believe each child is an artist who has an infinite ability to create art pieces that are not
+  comparable with any other art form.
+</p>
 
-  <h2>Community classes</h2>
+{{{include "gallery" galleryID="childrens" galleryImages=childrensArtImages.images
+baseURL=childrensArtImages.baseURL}}}
 
-  <p>A selection of work from vaious community clay making workshops</p>
+<h2>Community classes</h2>
 
-  {{{include "gallery" galleryID="workgallery" galleryImages=galleryImages.images baseURL=galleryImages.baseURL}}}
-  
-{{/wrap}}
+<p>A selection of work from vaious community clay making workshops</p>
+
+{{{include "gallery" galleryID="workgallery" galleryImages=galleryImages.images
+baseURL=galleryImages.baseURL}}} {{/wrap}}

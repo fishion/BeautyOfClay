@@ -9,23 +9,30 @@
   "scripts": {
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.js' -- npm run build",
     "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
-    "serve": "serve -p 4000 -c ../.serve.json dist"
+    "serve": "serve -p 4000 -c ../.serve.json dist",
+    "prepare": "husky"
   },
   "devDependencies": {
     "contact-us-api-client": "github:fishion/contact-us-api-client#v2.0.0",
     "copy-webpack-plugin": "^13.0.1",
-    "eslint": "^8.34.0",
-    "eslint-config-standard": "^17.0.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
     "handlebars-webpack-plugin": "^2.2.1",
-    "handlebarsextended": "github:fishion/HandlebarsExtended",
+    "handlebarsextended": "github:fishion/HandlebarsExtended#v2.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "onchange": "^7.1.0",
+    "prettier": "^3.6.2",
     "sass": "^1.38.0",
     "serve": "^14.2.0",
     "ts-loader": "^9.5.4",
     "tsx": "^4.20.6",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "typescript-eslint": "^8.46.4",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
   }
 }

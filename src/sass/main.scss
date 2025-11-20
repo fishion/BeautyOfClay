@@ -6,7 +6,7 @@
 */
 $breakpoint-tablet: 774px; /* phone <-> tablet */
 $breakpoint-small: 1024px; /* tablet <-> small desktop */
-$breakpoint-full: 1280px;  /* small desktop <-> full desktop */
+$breakpoint-full: 1280px; /* small desktop <-> full desktop */
 
 :root {
   --header-background-colour: rgb(27, 45, 75);
@@ -17,11 +17,11 @@ $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
   // colours
   --input-border: rgb(2, 2, 3);
   --link-colour: var(--header-background-colour);
-  --shadow-colour: rgba(27, 45, 75, .5);
+  --shadow-colour: rgba(27, 45, 75, 0.5);
   --highlight-colour: rgb(192, 148, 41);
   --highlight2-colour: rgb(255, 225, 151);
-  --highlight3-colour: rgb(83,136,142);
-  --highlight3-colour-faded: rgba(83,136,142,0.1);
+  --highlight3-colour: rgb(83, 136, 142);
+  --highlight3-colour-faded: rgba(83, 136, 142, 0.1);
 }
 
 /*****************************************************
@@ -33,8 +33,8 @@ $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
 }
 
 body {
-  background-color : var(--background-colour);
-  font-family: "Open Sans",sans-serif;
+  background-color: var(--background-colour);
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: var(--text-colour);
 }
@@ -61,10 +61,10 @@ form {
     font-size: 1rem;
     @media (min-width: $breakpoint-tablet) {
       width: 80%;
-      max-width: 600px
+      max-width: 600px;
     }
     @media (min-width: $breakpoint-small) {
-      max-width: 800px
+      max-width: 800px;
     }
     p {
       text-align: left;
@@ -78,13 +78,14 @@ form {
         color: rgb(100, 247, 100);
       }
     }
-    input, textarea {
+    input,
+    textarea {
       position: relative;
       box-sizing: border-box;
       width: 100%;
       height: 3rem;
       border: 1px solid var(--input-border);
-      padding: 1.5rem 1.5rem .5rem;
+      padding: 1.5rem 1.5rem 0.5rem;
       &:focus,
       &:hover {
         outline-style: none;
@@ -95,26 +96,28 @@ form {
       }
       &:focus + label,
       &.hascontent + label {
-        font-size: .8rem;
+        font-size: 0.8rem;
         top: 4px;
         color: rgb(150, 150, 150);
       }
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
     textarea {
       height: 15rem;
     }
     label {
       position: absolute;
-      top: 1rem; left: 1.5rem;
+      top: 1rem;
+      left: 1.5rem;
       text-align: left;
       font-size: 1rem;
       pointer-events: none;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
   }
 }
-button, a.button {
+button,
+a.button {
   display: block;
   width: 100%;
   background: none;
@@ -124,22 +127,22 @@ button, a.button {
   padding: 1rem 1.7rem 1rem 2rem;
   font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
   cursor: pointer;
   &:hover {
     color: var(--text-colour);
     border-color: var(--input-border);
   }
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 /*****************************************************
  * Page Structure
  *****************************************************/
- 
- header {
-  background-color : var(--header-background-colour);
+
+header {
+  background-color: var(--header-background-colour);
   &::before,
   &::after {
     content: " ";
@@ -155,7 +158,7 @@ button, a.button {
       height: 56px;
       padding: 0;
       margin: 0;
-      display:block;
+      display: block;
       @media (min-width: $breakpoint-tablet) {
         height: 70px;
       }
@@ -166,16 +169,18 @@ button, a.button {
   }
 
   #menu_collapser {
+    display: block;
     @media (min-width: $breakpoint-tablet) {
       display: none;
     }
-    display: block;
     float: right;
     margin: 2em;
-    padding-bottom: .4em;
-    color: #EEE;
-    border-bottom: 1px solid #EEE;
-    transition: color .3s, border-color .3s;
+    padding-bottom: 0.4em;
+    color: #eee;
+    border-bottom: 1px solid #eee;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
     cursor: pointer;
     &:hover,
     &.open {
@@ -206,27 +211,27 @@ button, a.button {
       li {
         margin-right: 1.2em;
         display: block;
-        text-align:center;
+        text-align: center;
         @media (min-width: $breakpoint-tablet) {
           display: inline-block;
-          border-bottom: 1px solid #EEE;
+          border-bottom: 1px solid #eee;
           &:last-of-type {
-            margin-right : 0;
+            margin-right: 0;
           }
           &.selected,
           &:hover {
             border-bottom-color: rgb(192, 148, 41);
-            transition: border-color .3s;
+            transition: border-color 0.3s;
           }
         }
         a {
-          font-size: .9rem;
+          font-size: 0.9rem;
           line-height: 2em;
           font-weight: 400;
           text-decoration: none;
           text-transform: uppercase;
-          color: #EEE;
-          transition: color .3s;
+          color: #eee;
+          transition: color 0.3s;
         }
         &.selected a,
         &:hover a {
@@ -237,8 +242,8 @@ button, a.button {
   }
 }
 
-
-main, footer {
+main,
+footer {
   width: 90%;
   margin: 2em auto;
   @media (min-width: $breakpoint-small) {
@@ -254,7 +259,7 @@ main {
   h1 {
     font-size: 2em;
     font-weight: 400;
-    margin: .3em 0 .7em;
+    margin: 0.3em 0 0.7em;
     text-align: center;
     @media (min-width: $breakpoint-tablet) {
       display: none;
@@ -277,7 +282,7 @@ main {
     margin-top: 0;
     font-size: 1.2rem;
     font-weight: 500;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
   h5 {
@@ -288,8 +293,9 @@ main {
   p {
     margin-bottom: 2em;
   }
-  p, li {
-    font-size: .8em;
+  p,
+  li {
+    font-size: 0.8em;
     line-height: 1.7em;
     @media (min-width: $breakpoint-tablet) {
       font-size: 1em;
@@ -299,7 +305,7 @@ main {
     font-weight: 700;
   }
   a {
-    color:var(--link-colour);
+    color: var(--link-colour);
     &:hover {
       text-decoration: none;
     }
@@ -308,7 +314,7 @@ main {
     // list-style: "🌻 ";
     padding-left: 1.5em;
     li {
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
   }
   img {
@@ -356,7 +362,7 @@ main {
       align-items: flex-start;
       article {
         box-shadow: 1px 2px 5px 0 var(--shadow-colour);
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         padding: 1rem;
         img {
           float: left;
@@ -368,15 +374,15 @@ main {
         }
         a.button {
           display: inline;
-          font-size: .5rem;
+          font-size: 0.5rem;
           margin-left: 0;
-          padding: .1rem 0.3rem;
+          padding: 0.1rem 0.3rem;
           @media (min-width: $breakpoint-tablet) {
-            font-size: .8rem;
+            font-size: 0.8rem;
             margin: 0 1em;
-            padding: .1rem 1rem;
+            padding: 0.1rem 1rem;
           }
-          letter-spacing: .15rem;
+          letter-spacing: 0.15rem;
           white-space: nowrap;
           border-width: 1px;
           text-decoration: none;
@@ -439,10 +445,10 @@ ul.banner-slideshow {
   position: relative;
   z-index: 1;
   font-size: 1.3em;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   color: white;
   border: 1px solid rgb(27, 45, 75);
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   a {
     color: white;
     text-decoration: underline dashed;
@@ -452,10 +458,10 @@ ul.banner-slideshow {
   }
 }
 
- /* Fontawesome social buttons */
+/* Fontawesome social buttons */
 .fa {
-  margin-right: .5em;
-  padding: .5em;
+  margin-right: 0.5em;
+  padding: 0.5em;
   font-size: 1.5em;
   width: 2em;
   text-align: center;
@@ -464,15 +470,14 @@ ul.banner-slideshow {
     opacity: 0.7;
   }
   &.fa-facebook {
-    background: #3B5998;
+    background: #3b5998;
     color: white;
   }
   &.fa-twitter {
-    background: #55ACEE;
+    background: #55acee;
     color: white;
   }
 }
-
 
 /*****************************************************
  * page sepcific styles
