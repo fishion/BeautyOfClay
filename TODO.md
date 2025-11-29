@@ -1,7 +1,5 @@
 # TODO
 
-- Test contact us page safely
-
 - General
   - Host js for gallery, rather than using public cdn versions
   - convert to REM and use CSS variables for better responsive scaling
