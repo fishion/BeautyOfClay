@@ -1,5 +1,5 @@
 //import { generateForm, type ContactFormConfig } from '../../../contact-us-api-client/dist'
-import { generateForm, type ContactFormConfig } from "contact-us-api-client"
+import { generateForm, type ContactFormConfig } from "@fishion/contact-us-api-client"
 import config from "../../config.json" with { type: "json" }
 
 export default {
