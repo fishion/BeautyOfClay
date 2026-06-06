@@ -6,6 +6,9 @@ import config from "../../config.json" with { type: "json" }
 const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
 const srcRoot = path.resolve(path.dirname(__filename), "../")
 
+const generalImgDir = path.join(config.galleryPaths.gallery, "general/")
+const persiaMapDir = path.join(config.galleryPaths.gallery, "persiaMap/")
+
 const getImages = (dirPath: string): string[] => {
   return readdirSync(path.join(srcRoot, dirPath), { withFileTypes: true })
     .filter((item: Dirent) => !item.isDirectory())
@@ -15,12 +18,12 @@ const getImages = (dirPath: string): string[] => {
 }
 
 export default {
-  childrensArtImages: {
-    baseURL: config.galleryPaths.childrensArtImages,
-    images: getImages(config.galleryPaths.childrensArtImages),
+  persiaMap: {
+    baseURL: persiaMapDir,
+    images: getImages(persiaMapDir),
   },
   galleryImages: {
-    baseURL: config.galleryPaths.gallery,
-    images: getImages(config.galleryPaths.gallery),
+    baseURL: generalImgDir,
+    images: getImages(generalImgDir),
   },
 }

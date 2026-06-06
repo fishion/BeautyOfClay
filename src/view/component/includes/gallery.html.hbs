@@ -23,6 +23,10 @@
     "thumbnailOpenImage": true
   }'
 >
-  {{#each galleryImages as |image|}}<a href="{{image}}" data-ngthumb="{{image}}" data-ngdesc=""></a
+  {{#each galleryImages as |image|}}<a
+    href="{{image}}"
+    data-ngthumb="{{mp4Thumb image}}"
+    data-ngdesc=""
+  ></a
   >{{/each}}
 </div>

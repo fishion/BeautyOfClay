@@ -20,8 +20,7 @@
     "outputBuildPath": "docs"
   },
   "galleryPaths": {
-    "gallery": "img/gallery/general/",
-    "childrensArtImages": "img/gallery/childrensArtImages/",
+    "gallery": "img/gallery/",
     "workshop": "img/workshop/",
     "exhibitions": "img/exhibitions/"
   },
