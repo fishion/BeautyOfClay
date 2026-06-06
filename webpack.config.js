@@ -37,12 +37,12 @@ async function preloadControllers() {
 }
 
 hbx.registerHelper("mp4Thumb", function (image) {
-  console.log(`**** Image is ${image}`)
-  if (typeof image === "string" && image.endsWith(".mp4")) {
-    console.log(`Found an mp4 - will return ${"thumbnails/" + image.slice(0, -4) + ".png"}`)
-    return "thumbnails/" + image.slice(0, -4) + ".png"
-  }
-  return image
+  return typeof image === "string" && image.endsWith(".mp4")
+    ? "thumbnails/" + image.slice(0, -4) + ".png"
+    : image
+})
+hbx.registerHelper("mp4Text", function (image, text) {
+  return typeof image === "string" && image.endsWith(".mp4") ? text : ""
 })
 
 await preloadControllers()
@@ -105,6 +105,7 @@ export default {
         math: hbx.helpers.math,
         json: hbx.helpers.json,
         mp4Thumb: hbx.helpers.mp4Thumb,
+        mp4Text: hbx.helpers.mp4Text,
       },
       onBeforeRender: (_, data, filename) => {
         const controllerPath = filename
