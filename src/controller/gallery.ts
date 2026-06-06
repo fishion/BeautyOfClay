@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url) // get the resolved path to th
 const srcRoot = path.resolve(path.dirname(__filename), "../")
 
 const generalImgDir = path.join(config.galleryPaths.gallery, "general/")
-const persiaMapDir = path.join(config.galleryPaths.gallery, "persiaMap/")
+const persiaMapDir = path.join(config.galleryPaths.gallery, "persiamap/")
 
 const getImages = (dirPath: string): string[] => {
   return readdirSync(path.join(srcRoot, dirPath), { withFileTypes: true })
