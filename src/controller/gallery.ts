@@ -6,8 +6,9 @@ import config from "../../config.json" with { type: "json" }
 const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
 const srcRoot = path.resolve(path.dirname(__filename), "../")
 
+const persiaMapDir = path.join(config.galleryPaths.gallery, "persiaMap/")
+const childrensArtDir = path.join(config.galleryPaths.gallery, "childrensArtImages/")
 const generalImgDir = path.join(config.galleryPaths.gallery, "general/")
-const persiaMapDir = path.join(config.galleryPaths.gallery, "persiamap/")
 
 const getImages = (dirPath: string): string[] => {
   return readdirSync(path.join(srcRoot, dirPath), { withFileTypes: true })
@@ -21,6 +22,10 @@ export default {
   persiaMap: {
     baseURL: persiaMapDir,
     images: getImages(persiaMapDir),
+  },
+  childrensArt: {
+    baseURL: childrensArtDir,
+    images: getImages(childrensArtDir),
   },
   galleryImages: {
     baseURL: generalImgDir,
